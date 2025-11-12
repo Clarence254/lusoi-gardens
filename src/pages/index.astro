@@ -5,16 +5,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <style>
   /* Allow vertical scrolling on mobile */
   @media (max-width: 767.98px) {
-    /* Completely disable owl-carousel touch interactions */
+    /* Show only first slide on mobile, hide others */
+    .home-slider .slider-item:not(:first-child) {
+      display: none !important;
+    }
+    
+    /* Make hero section scrollable */
     .hero,
     .home-slider,
     .home-slider * {
       touch-action: pan-y !important;
       -ms-touch-action: pan-y !important;
       pointer-events: auto !important;
+      overflow: visible !important;
     }
     
-    /* Make owl-carousel non-interactive but allow scrolling through it */
+    /* Remove owl-carousel wrapper styles that might block scrolling */
+    .home-slider.owl-carousel,
     .home-slider .owl-stage-outer,
     .home-slider .owl-stage,
     .home-slider .owl-item {
@@ -22,6 +29,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       -ms-touch-action: pan-y !important;
       overflow: visible !important;
       -webkit-overflow-scrolling: touch;
+      position: relative !important;
     }
     
     /* Ensure hero doesn't block scrolling */
@@ -30,6 +38,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       overflow: visible !important;
       touch-action: pan-y !important;
       -ms-touch-action: pan-y !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+    
+    .home-slider {
+      height: auto !important;
+      min-height: 100vh;
+    }
+    
+    .home-slider .slider-item {
+      height: 100vh !important;
+      min-height: 100vh;
     }
     
     /* Ensure body can scroll */
@@ -51,42 +71,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 </style>
 
 <script is:inline>
-  // Prevent owl-carousel from blocking vertical scrolling on mobile
+  // Ensure owl-carousel doesn't interfere on mobile (already prevented in main.js, but double-check)
   if (window.innerWidth <= 767) {
     document.addEventListener('DOMContentLoaded', function() {
       setTimeout(function() {
-        var homeSlider = document.querySelector('.home-slider');
-        if (homeSlider) {
-          var owlStageOuter = homeSlider.querySelector('.owl-stage-outer');
-          if (owlStageOuter) {
-            var startY, startX;
-            
-            // Allow vertical scrolling through owl-carousel
-            owlStageOuter.addEventListener('touchstart', function(e) {
-              if (e.touches.length === 1) {
-                startY = e.touches[0].clientY;
-                startX = e.touches[0].clientX;
-              }
-            }, { passive: true });
-            
-            owlStageOuter.addEventListener('touchmove', function(e) {
-              if (e.touches.length === 1 && startY !== undefined) {
-                var deltaY = Math.abs(e.touches[0].clientY - startY);
-                var deltaX = Math.abs(e.touches[0].clientX - startX);
-                
-                // If vertical movement is greater than horizontal, allow scrolling
-                if (deltaY > deltaX && deltaY > 10) {
-                  e.stopPropagation();
-                  // Don't prevent default to allow scrolling
-                } else if (deltaX > deltaY) {
-                  // Horizontal swipe - prevent to stop carousel
-                  e.preventDefault();
-                }
-              }
-            }, { passive: false });
-          }
+        var $homeSlider = $('.home-slider');
+        if ($homeSlider.length && $homeSlider.data('owlCarousel')) {
+          $homeSlider.trigger('destroy.owl.carousel');
+          $homeSlider.removeClass('owl-carousel owl-loaded');
         }
-      }, 1500);
+      }, 1000);
     });
   }
 </script>

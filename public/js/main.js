@@ -65,36 +65,35 @@
 	var carousel = function() {
 		var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 767);
 		
-		$('.home-slider').owlCarousel({
-	    loop:true,
-	    autoplay: true,
-	    margin:0,
-	    animateOut: 'fadeOut',
-	    animateIn: 'fadeIn',
-	    nav:false,
-	    dots: false,
-	    autoplayHoverPause: false,
-	    items: 1,
-	    touchDrag: !isMobileDevice,
-	    pullDrag: !isMobileDevice,
-	    mouseDrag: true,
-	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
-	    responsive:{
-	      0:{
-	        items:1,
-	        touchDrag: false,
-	        pullDrag: false
-	      },
-	      600:{
-	        items:1,
-	        touchDrag: false,
-	        pullDrag: false
-	      },
-	      1000:{
-	        items:1
-	      }
-	    }
-		});
+		// Only initialize owl-carousel on desktop to allow mobile scrolling
+		if (!isMobileDevice) {
+			$('.home-slider').owlCarousel({
+		    loop:true,
+		    autoplay: true,
+		    margin:0,
+		    animateOut: 'fadeOut',
+		    animateIn: 'fadeIn',
+		    nav:false,
+		    dots: false,
+		    autoplayHoverPause: false,
+		    items: 1,
+		    touchDrag: true,
+		    pullDrag: true,
+		    mouseDrag: true,
+		    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
+		    responsive:{
+		      0:{
+		        items:1
+		      },
+		      600:{
+		        items:1
+		      },
+		      1000:{
+		        items:1
+		      }
+		    }
+			});
+		}
 		$('.carousel-testimony').owlCarousel({
 			autoplay: true,
 			loop: true,
