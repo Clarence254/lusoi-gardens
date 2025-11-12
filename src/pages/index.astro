@@ -119,28 +119,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<div class="container">
 			<div class="row no-gutters">
 				<div class="col-md-3">
-					<a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(/images/bird-1.jpg);">
+					<a href="#" class="services-wrap services-overlay img align-items-end d-flex" style="background-image: url(/images/bird-1.jpg);">
 						<div class="text text-center pb-2">
 							<h3>Nature Walks</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(/images/kids-park.jpeg);">
+					<a href="#" class="services-wrap services-overlay img align-items-end d-flex" style="background-image: url(/images/kids-park.jpeg);">
 						<div class="text text-center pb-2">
 							<h3>Kids Park</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3">
-					<a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(/images/mountain-bike.jpg);">
+					<a href="#" class="services-wrap services-overlay img align-items-end d-flex" style="background-image: url(/images/mountain-bike.jpg);">
 						<div class="text text-center pb-2">
 							<h3>Mountain Bike Trails</h3>
 						</div>
 					</a>
 				</div>
 				<div class="col-md-3">
-						<a href="#" class="services-wrap img align-items-end d-flex" style="background-image: url(/images/bonfire.jpg);">
+						<a href="#" class="services-wrap services-overlay img align-items-end d-flex" style="background-image: url(/images/bonfire.jpg);">
 							<div class="text text-center pb-2">
 								<h3>Evening Bonfire</h3>
 							</div>
@@ -173,7 +173,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>      
         </div>
         <div class="col-md px-md-1 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services active py-4 d-block text-center">
+          <div class="media block-6 services py-4 d-block text-center">
             <div class="d-flex justify-content-center">
             	<div class="icon d-flex align-items-center justify-content-center">
             		<span class="flaticon-serving-dish"></span>
@@ -415,13 +415,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		<div class="container-fluid px-0">
 			<div class="row no-gutters justify-content-end">
 				<div class="col-md-12">
-					<div id="home" class="video-hero" style="height: 800px; background-image: url(/images/landscape-1.jpg); background-size:cover; background-position: center center;">
-						<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=t6JDLYZxHzM',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
-						<div class="container">
-							<div class="row justify-content-start d-flex align-items-end height-text ">
+				<div id="home" class="video-hero" style="height: 800px; background-image: url(/images/landscape-1.jpg); background-size:cover; background-position: center center; position: relative;">
+					<a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=t6JDLYZxHzM',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>
+					<div class="overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 10;"></div>
+					<div class="container" style="position: relative; z-index: 11; height: 100%;">
+							<div class="row justify-content-start d-flex align-items-center height-text" style="height: 100%;">
 								<div class="col-md-8">
 									<div class="text">
-										<h1>Guests’ Favourite Getaway</h1>
+										<h1>Guests' Favourite Getaway</h1>
 									</div>
 								</div>
 							</div>
