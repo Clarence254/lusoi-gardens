@@ -8623,19 +8623,33 @@ h1, h2, h3, h4, h5,
       background: #000000;
       opacity: .1;
       z-index: 1; }
-    .hero .home-slider .slider-item .slider-text {
+    .hero .home-slider .slider-item .container {
       height: 100%;
       position: relative;
       z-index: 2;
       display: flex;
       align-items: center;
+      justify-content: center; }
+    .hero .home-slider .slider-item .slider-text {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      padding: 20px 0; }
+      margin: 0; }
+    .hero .home-slider .slider-item .slider-text .col-md-8 {
+      text-align: center;
+      width: 100%;
+      max-width: 100%; }
     .hero .home-slider .slider-item .slider-text .text {
       z-index: 2;
       color: rgba(255, 255, 255, 0.9);
       width: 100%;
-      text-align: center; }
+      text-align: center;
+      margin-bottom: 0;
+      padding-bottom: 0; }
     .hero .home-slider .slider-item .slider-text h1 {
       font-size: 40px;
       font-weight: 400;
