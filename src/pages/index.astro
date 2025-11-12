@@ -3,53 +3,35 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <style>
-  .hero,
-  .home-slider,
-  .home-slider .owl-stage-outer,
-  .home-slider .owl-stage,
-  .home-slider .owl-item {
-    touch-action: pan-y !important;
-    -ms-touch-action: pan-y !important;
-  }
-  
+  /* Allow vertical scrolling on mobile */
   @media (max-width: 767.98px) {
     .hero,
-    .home-slider {
+    .home-slider,
+    .home-slider .owl-stage-outer,
+    .home-slider .owl-stage,
+    .home-slider .owl-item,
+    .home-slider .owl-item .slider-item {
+      touch-action: pan-y !important;
+      -ms-touch-action: pan-y !important;
       overflow: visible !important;
     }
     
+    /* Prevent owl-carousel from blocking scroll */
     .home-slider .owl-stage-outer {
-      overflow: visible !important;
+      touch-action: pan-y !important;
+      -ms-touch-action: pan-y !important;
     }
-  }
-  
-  /* Ensure body can scroll */
-  body {
-    overflow-x: hidden;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch;
+    
+    /* Ensure body can scroll */
+    html, body {
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch;
+      height: auto !important;
+    }
   }
 </style>
 
-<script is:inline>
-  // Disable owl-carousel touch dragging on mobile to allow vertical scrolling
-  (function() {
-    if (window.innerWidth <= 767) {
-      // Wait for owl-carousel to initialize
-      setTimeout(function() {
-        var $homeSlider = $('.home-slider');
-        if ($homeSlider.length && $homeSlider.data('owlCarousel')) {
-          var owl = $homeSlider.data('owlCarousel');
-          if (owl) {
-            owl.settings.touchDrag = false;
-            owl.settings.pullDrag = false;
-            owl.update();
-          }
-        }
-      }, 1500);
-    }
-  })();
-</script>
 
 <BaseLayout title="Lusoi Gardens" activePage="home">
 	<div class="hero" style="touch-action: pan-y; -ms-touch-action: pan-y;">

@@ -63,6 +63,8 @@
    $.Scrollax();
 
 	var carousel = function() {
+		var isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 767);
+		
 		$('.home-slider').owlCarousel({
 	    loop:true,
 	    autoplay: true,
@@ -73,13 +75,20 @@
 	    dots: false,
 	    autoplayHoverPause: false,
 	    items: 1,
+	    touchDrag: !isMobileDevice,
+	    pullDrag: !isMobileDevice,
+	    mouseDrag: true,
 	    navText : ["<span class='ion-md-arrow-back'></span>","<span class='ion-chevron-right'></span>"],
 	    responsive:{
 	      0:{
-	        items:1
+	        items:1,
+	        touchDrag: false,
+	        pullDrag: false
 	      },
 	      600:{
-	        items:1
+	        items:1,
+	        touchDrag: false,
+	        pullDrag: false
 	      },
 	      1000:{
 	        items:1
