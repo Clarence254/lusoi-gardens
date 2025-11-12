@@ -2,14 +2,63 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
+<style>
+  .hero,
+  .home-slider,
+  .home-slider .owl-stage-outer,
+  .home-slider .owl-stage,
+  .home-slider .owl-item {
+    touch-action: pan-y !important;
+    -ms-touch-action: pan-y !important;
+  }
+  
+  @media (max-width: 767.98px) {
+    .hero,
+    .home-slider {
+      overflow: visible !important;
+    }
+    
+    .home-slider .owl-stage-outer {
+      overflow: visible !important;
+    }
+  }
+  
+  /* Ensure body can scroll */
+  body {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
+
+<script is:inline>
+  // Disable owl-carousel touch dragging on mobile to allow vertical scrolling
+  (function() {
+    if (window.innerWidth <= 767) {
+      // Wait for owl-carousel to initialize
+      setTimeout(function() {
+        var $homeSlider = $('.home-slider');
+        if ($homeSlider.length && $homeSlider.data('owlCarousel')) {
+          var owl = $homeSlider.data('owlCarousel');
+          if (owl) {
+            owl.settings.touchDrag = false;
+            owl.settings.pullDrag = false;
+            owl.update();
+          }
+        }
+      }, 1500);
+    }
+  })();
+</script>
+
 <BaseLayout title="Lusoi Gardens" activePage="home">
-	<div class="hero">
+	<div class="hero" style="touch-action: pan-y; -ms-touch-action: pan-y;">
 		<div class="container-wrap d-flex justify-content-end align-items-end">
 			<!-- <a href="https://www.youtube.com/watch?v=ism1XqnZJEg" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 				<span class="ion-ios-play play"></span>
 			</a> -->
 		</div>
-    <section class="home-slider owl-carousel">
+    <section class="home-slider owl-carousel" style="touch-action: pan-y; -ms-touch-action: pan-y;">
       <div class="slider-item" style="background-image:url(/images/landscape-1.jpg);">
       	<div class="overlay" style="pointer-events: none;"></div>
         <div class="container">
