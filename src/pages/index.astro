@@ -2,99 +2,16 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<style>
-  /* Allow vertical scrolling on mobile */
-  @media (max-width: 767.98px) {
-    /* Show only first slide on mobile, hide others */
-    .home-slider .slider-item:not(:first-child) {
-      display: none !important;
-    }
-    
-    /* Make hero section scrollable */
-    .hero,
-    .home-slider,
-    .home-slider * {
-      touch-action: pan-y !important;
-      -ms-touch-action: pan-y !important;
-      pointer-events: auto !important;
-      overflow: visible !important;
-    }
-    
-    /* Remove owl-carousel wrapper styles that might block scrolling */
-    .home-slider.owl-carousel,
-    .home-slider .owl-stage-outer,
-    .home-slider .owl-stage,
-    .home-slider .owl-item {
-      touch-action: pan-y !important;
-      -ms-touch-action: pan-y !important;
-      overflow: visible !important;
-      -webkit-overflow-scrolling: touch;
-      position: relative !important;
-    }
-    
-    /* Ensure hero doesn't block scrolling */
-    .hero {
-      position: relative !important;
-      overflow: visible !important;
-      touch-action: pan-y !important;
-      -ms-touch-action: pan-y !important;
-      height: auto !important;
-      min-height: 100vh;
-    }
-    
-    .home-slider {
-      height: auto !important;
-      min-height: 100vh;
-    }
-    
-    .home-slider .slider-item {
-      height: 100vh !important;
-      min-height: 100vh;
-    }
-    
-    /* Ensure body can scroll */
-    html {
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch;
-      height: auto !important;
-    }
-    
-    body {
-      overflow-x: hidden !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch;
-      position: relative !important;
-      height: auto !important;
-    }
-  }
-</style>
-
-<script is:inline>
-  // Ensure owl-carousel doesn't interfere on mobile (already prevented in main.js, but double-check)
-  if (window.innerWidth <= 767) {
-    document.addEventListener('DOMContentLoaded', function() {
-      setTimeout(function() {
-        var $homeSlider = $('.home-slider');
-        if ($homeSlider.length && $homeSlider.data('owlCarousel')) {
-          $homeSlider.trigger('destroy.owl.carousel');
-          $homeSlider.removeClass('owl-carousel owl-loaded');
-        }
-      }, 1000);
-    });
-  }
-</script>
-
 <BaseLayout title="Lusoi Gardens" activePage="home">
-	<div class="hero" style="touch-action: pan-y; -ms-touch-action: pan-y;">
+	<div class="hero">
 		<div class="container-wrap d-flex justify-content-end align-items-end">
 			<!-- <a href="https://www.youtube.com/watch?v=ism1XqnZJEg" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 				<span class="ion-ios-play play"></span>
 			</a> -->
 		</div>
-    <section class="home-slider owl-carousel" style="touch-action: pan-y; -ms-touch-action: pan-y;">
+    <section class="home-slider owl-carousel">
       <div class="slider-item" style="background-image:url(/images/landscape-1.jpg);">
-      	<div class="overlay" style="pointer-events: none;"></div>
+      	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center">
           <div class="col-md-8 ftco-animate">
@@ -108,7 +25,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="slider-item" style="background-image:url(/images/landscape-2.jpg);">
-      	<div class="overlay" style="pointer-events: none;"></div>
+      	<div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center">
           <div class="col-md-8 ftco-animate">

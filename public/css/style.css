@@ -8565,6 +8565,19 @@ h1, h2, h3, h4, h5,
     border-radius: 50%; }
     .hero .icon-video span {
       font-size: 30px; }
+  @media (max-width: 767.98px) {
+    .hero .home-slider .owl-stage-outer {
+      touch-action: pan-y;
+      -ms-touch-action: pan-y;
+      overflow: visible; }
+    .hero .home-slider .owl-stage-outer .owl-stage {
+      touch-action: pan-y;
+      -ms-touch-action: pan-y; }
+    .hero .home-slider .owl-stage-outer .owl-stage .owl-item {
+      touch-action: pan-y;
+      -ms-touch-action: pan-y; }
+    .hero .home-slider .slider-item .overlay {
+      pointer-events: none; } }
 
 .bg-light {
   background: #f8f9fa !important; }
