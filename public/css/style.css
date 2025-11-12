@@ -8629,11 +8629,13 @@ h1, h2, h3, h4, h5,
       z-index: 2;
       display: flex;
       align-items: center;
+      justify-content: center;
       padding: 20px 0; }
     .hero .home-slider .slider-item .slider-text .text {
       z-index: 2;
       color: rgba(255, 255, 255, 0.9);
-      width: 100%; }
+      width: 100%;
+      text-align: center; }
     .hero .home-slider .slider-item .slider-text h1 {
       font-size: 40px;
       font-weight: 400;
