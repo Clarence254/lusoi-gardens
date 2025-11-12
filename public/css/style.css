@@ -8566,18 +8566,84 @@ h1, h2, h3, h4, h5,
     .hero .icon-video span {
       font-size: 30px; }
   @media (max-width: 767.98px) {
+    /* Make home-slider work without owl-carousel on mobile */
+    .hero {
+      height: 100vh;
+      min-height: 600px;
+      position: relative;
+      overflow: hidden; }
+    .hero .home-slider {
+      position: relative;
+      height: 100%;
+      min-height: 600px;
+      overflow: hidden;
+      touch-action: pan-y;
+      -ms-touch-action: pan-y;
+      display: block !important; }
     .hero .home-slider .owl-stage-outer {
       touch-action: pan-y;
       -ms-touch-action: pan-y;
-      overflow: visible; }
+      overflow: visible;
+      position: relative;
+      height: 100%;
+      display: block !important; }
     .hero .home-slider .owl-stage-outer .owl-stage {
       touch-action: pan-y;
-      -ms-touch-action: pan-y; }
+      -ms-touch-action: pan-y;
+      position: relative;
+      height: 100%;
+      display: block !important; }
     .hero .home-slider .owl-stage-outer .owl-stage .owl-item {
       touch-action: pan-y;
-      -ms-touch-action: pan-y; }
+      -ms-touch-action: pan-y;
+      position: relative;
+      height: 100%;
+      display: block !important; }
+    /* Show only first slide on mobile - works with or without owl-carousel */
+    .hero .home-slider > .slider-item:not(:first-child),
+    .hero .home-slider .owl-stage-outer .owl-stage .owl-item:not(:first-child) .slider-item {
+      display: none !important; }
+    .hero .home-slider > .slider-item,
+    .hero .home-slider .owl-stage-outer .owl-stage .owl-item .slider-item {
+      display: block !important;
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center; }
     .hero .home-slider .slider-item .overlay {
-      pointer-events: none; } }
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000000;
+      opacity: .1;
+      z-index: 1; }
+    .hero .home-slider .slider-item .slider-text {
+      height: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      padding: 20px 0; }
+    .hero .home-slider .slider-item .slider-text .text {
+      z-index: 2;
+      color: rgba(255, 255, 255, 0.9);
+      width: 100%; }
+    .hero .home-slider .slider-item .slider-text h1 {
+      font-size: 40px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 15px; }
+    .hero .home-slider .slider-item .slider-text h2 {
+      font-size: 20px;
+      color: #fff;
+      line-height: 1.4; } }
 
 .bg-light {
   background: #f8f9fa !important; }
