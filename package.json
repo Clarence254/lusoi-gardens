@@ -1,0 +1,18 @@
+{
+  "name": "lusoi-gardens",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npx astro dev",
+    "start": "npx astro dev",
+    "build": "npx astro build",
+    "preview": "npx astro preview",
+    "astro": "npx astro"
+  },
+  "dependencies": {
+    "astro": "^4.16.19"
+  },
+  "optionalDependencies": {
+    "@esbuild/win32-x64": "^0.25.12"
+  }
+}

@@ -1,0 +1,29 @@
+---
+interface Props {
+  activePage?: string;
+}
+
+const { activePage = '' } = Astro.props;
+---
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/"><img src="/images/lusoi-gardens-logo.png" alt="Lusoi Gardens Logo" width="136" height="100"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class={`nav-item ${activePage === 'home' ? 'active' : ''}`}><a href="/" class="nav-link">Home</a></li>
+        <li class={`nav-item ${activePage === 'about' ? 'active' : ''}`}><a href="/about" class="nav-link">About</a></li>
+        <li class={`nav-item ${activePage === 'rooms' ? 'active' : ''}`}><a href="/rooms" class="nav-link">Rooms</a></li>
+        <li class={`nav-item ${activePage === 'leisure-activities' ? 'active' : ''}`}><a href="/leisure-activities" class="nav-link">Leisure Activities</a></li>
+        <li class={`nav-item ${activePage === 'nearby-attractions' ? 'active' : ''}`}><a href="/nearby-attractions" class="nav-link">Nearby Attractions</a></li>
+        <li class={`nav-item ${activePage === 'contact' ? 'active' : ''}`}><a href="/contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END nav -->
+
