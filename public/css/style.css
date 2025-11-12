@@ -8852,14 +8852,8 @@ h1, h2, h3, h4, h5,
     background: #312b30; }
     .services.active .icon span {
       color: #fff; }
-    .services.active .media-body h3 {
-      color: #fff; }
-  .services:hover {
-    background: #b69100; }
-    .services:hover .icon span {
-      color: #fff; }
-    .services:hover h3 {
-      color: #fff; }
+  .services.active .media-body h3 {
+    color: #fff; }
 
 .video-hero {
   background-size: cover;

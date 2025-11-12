@@ -10,13 +10,13 @@ interface Props {
 }
 
 const { 
-  title = 'Roxandrea | BsW', 
+  title = 'Lusoi Gardens', 
   activePage,
-  description = 'Roxandrea Hotel - More than a hotel... an experience. Experience epic beauty at Roxandrea Hotel & Resort.',
-  ogImage = '/images/bg_1.jpg'
+  description = 'Lusoi Gardens - Your Gateway to Nature, Adventure & Serenity.',
+  ogImage = '/images/lusoi-gardens-logo.png'
 } = Astro.props;
 
-const siteUrl = Astro.site?.href || 'https://roxandrea.com';
+const siteUrl = Astro.site?.href || 'https://lusoigardens.com';
 const fullImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 ---
 
@@ -41,6 +41,10 @@ const fullImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage
   <meta property="twitter:title" content={title} />
   <meta property="twitter:description" content={description} />
   <meta property="twitter:image" content={fullImageUrl} />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/lusoi-gardens-logo.png" />
+  <link rel="apple-touch-icon" href="/images/lusoi-gardens-logo.png" />
   
   <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
