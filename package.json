@@ -10,6 +10,7 @@
     "astro": "npx astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
     "astro": "^4.16.19",
     "patch-package": "^8.0.1"
   },
