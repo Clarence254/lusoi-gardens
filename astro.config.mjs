@@ -1,9 +1,12 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://lusoigardens.com',
+  output: 'server', // Server-rendered mode required for API routes
+  adapter: netlify(),
   integrations: [
     sitemap({
       changefreq: 'weekly',
@@ -16,7 +19,7 @@ export default defineConfig({
       exclude: ['jquery', 'popper.js']
     },
     ssr: {
-      noExternal: []
+      noExternal: ['nodemailer']
     }
   }
 });

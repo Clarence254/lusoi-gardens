@@ -33,3 +33,6 @@ Desktop.ini
 *.swo
 *~
 
+
+# Local Netlify folder
+.netlify
