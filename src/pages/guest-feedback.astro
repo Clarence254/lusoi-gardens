@@ -33,22 +33,23 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <form action="#" class="bg-white p-5 contact-form">
+          <form id="feedback-form" class="bg-white p-5 contact-form">
+            <div id="form-message" class="alert" style="display: none;"></div>
             <div class="form-group">
               <label for="name">Your Name *</label>
-              <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+              <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="form-group">
               <label for="email">Your Email *</label>
-              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
             </div>
             <div class="form-group">
               <label for="stay-date">Date of Stay</label>
-              <input type="date" id="stay-date" class="form-control">
+              <input type="date" name="stay-date" id="stay-date" class="form-control">
             </div>
             <div class="form-group">
               <label for="rating">Overall Rating *</label>
-              <select id="rating" class="form-control" required>
+              <select name="rating" id="rating" class="form-control" required>
                 <option value="">Select Rating</option>
                 <option value="5">5 - Excellent</option>
                 <option value="4">4 - Very Good</option>
@@ -59,7 +60,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="form-group">
               <label for="accommodation">Accommodation Rating</label>
-              <select id="accommodation" class="form-control">
+              <select name="accommodation" id="accommodation" class="form-control">
                 <option value="">Select Rating</option>
                 <option value="5">5 - Excellent</option>
                 <option value="4">4 - Very Good</option>
@@ -70,7 +71,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="form-group">
               <label for="service">Service Rating</label>
-              <select id="service" class="form-control">
+              <select name="service" id="service" class="form-control">
                 <option value="">Select Rating</option>
                 <option value="5">5 - Excellent</option>
                 <option value="4">4 - Very Good</option>
@@ -81,7 +82,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="form-group">
               <label for="food">Food & Dining Rating</label>
-              <select id="food" class="form-control">
+              <select name="food" id="food" class="form-control">
                 <option value="">Select Rating</option>
                 <option value="5">5 - Excellent</option>
                 <option value="4">4 - Very Good</option>
@@ -92,7 +93,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="form-group">
               <label for="activities">Activities & Experiences Rating</label>
-              <select id="activities" class="form-control">
+              <select name="activities" id="activities" class="form-control">
                 <option value="">Select Rating</option>
                 <option value="5">5 - Excellent</option>
                 <option value="4">4 - Very Good</option>
@@ -103,15 +104,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             </div>
             <div class="form-group">
               <label for="message">Your Feedback *</label>
-              <textarea id="message" cols="30" rows="7" class="form-control" placeholder="Please share your experience, what you enjoyed most, and any suggestions for improvement..." required></textarea>
+              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Please share your experience, what you enjoyed most, and any suggestions for improvement..." required></textarea>
             </div>
             <div class="form-group">
               <label>
-                <input type="checkbox" required> I agree to share this feedback publicly (optional)
+                <input type="checkbox" name="public-consent" id="public-consent"> I agree to share this feedback publicly (optional)
               </label>
             </div>
             <div class="form-group">
-              <input type="submit" value="Submit Feedback" class="btn btn-primary py-3 px-5">
+              <input type="submit" value="Submit Feedback" class="btn btn-primary py-3 px-5" id="submit-btn">
             </div>
           </form>
         </div>
@@ -125,5 +126,51 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <script>
+    const form = document.getElementById('feedback-form') as HTMLFormElement;
+    const messageDiv = document.getElementById('form-message') as HTMLDivElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLInputElement;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Disable submit button
+      submitBtn.disabled = true;
+      submitBtn.value = 'Submitting...';
+      
+      // Hide previous messages
+      messageDiv.style.display = 'none';
+      
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch('/api/guest-feedback', {
+          method: 'POST',
+          body: formData,
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          messageDiv.className = 'alert alert-success';
+          messageDiv.textContent = data.message;
+          messageDiv.style.display = 'block';
+          form.reset();
+        } else {
+          messageDiv.className = 'alert alert-danger';
+          messageDiv.textContent = data.error || 'An error occurred. Please try again.';
+          messageDiv.style.display = 'block';
+        }
+      } catch (error) {
+        messageDiv.className = 'alert alert-danger';
+        messageDiv.textContent = 'An error occurred while submitting your feedback. Please try again later.';
+        messageDiv.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.value = 'Submit Feedback';
+      }
+    });
+  </script>
 </BaseLayout>
 
