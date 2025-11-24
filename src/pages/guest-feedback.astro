@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="Guest Feedback - Share Your Experience | Lusoi Gardens"
+  activePage="contact"
+  description="We value your feedback! Share your experience at Lusoi Gardens and help us improve. Your thoughts help us create better memories for future guests."
+  keywords="Lusoi Gardens feedback, guest reviews, customer feedback, resort reviews Kenya"
+  ogImage="/images/landscape-2.jpg"
+>
+	<div class="hero-wrap" style="background-image: url('/images/landscape-2.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
+        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+        	<div class="text">
+            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Guest Feedback</span></p>
+            <h1 class="mb-4 bread">Guest Feedback</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<section class="ftco-section contact-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-7 text-center">
+          <h2 class="mb-4">We'd Love to Hear From You</h2>
+          <p>Your feedback helps us improve and create better experiences for all our guests. Please take a moment to share your thoughts about your stay at Lusoi Gardens.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form action="#" class="bg-white p-5 contact-form">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email *</label>
+              <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <label for="stay-date">Date of Stay</label>
+              <input type="date" id="stay-date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="rating">Overall Rating *</label>
+              <select id="rating" class="form-control" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="accommodation">Accommodation Rating</label>
+              <select id="accommodation" class="form-control">
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Rating</label>
+              <select id="service" class="form-control">
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="food">Food & Dining Rating</label>
+              <select id="food" class="form-control">
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="activities">Activities & Experiences Rating</label>
+              <select id="activities" class="form-control">
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Feedback *</label>
+              <textarea id="message" cols="30" rows="7" class="form-control" placeholder="Please share your experience, what you enjoyed most, and any suggestions for improvement..." required></textarea>
+            </div>
+            <div class="form-group">
+              <label>
+                <input type="checkbox" required> I agree to share this feedback publicly (optional)
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Submit Feedback" class="btn btn-primary py-3 px-5">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8 text-center">
+          <p class="mb-3">Thank you for taking the time to share your experience with us!</p>
+          <a href="/contact" class="btn btn-secondary py-2 px-4 mr-2">Contact Us</a>
+          <a href="/" class="btn btn-primary py-2 px-4">Return Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

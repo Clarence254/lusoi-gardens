@@ -23,31 +23,68 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </div>
 	
-	<section class="ftco-section ftc-no-pb ftc-no-pt">
+	<!-- Intro Section -->
+	<section class="ftco-section">
 		<div class="container">
-			<div class="row">
-			<div class="col-md-5 p-md-5 img img-2 img-3 d-none d-md-flex justify-content-center align-items-center" style="background-image: url(/images/bird-2.jpg);">
-				<!-- <a href="https://vimeo.com/45830194" class="icon popup-vimeo d-flex justify-content-center align-items-center">
-					<span class="icon-play"></span>
-				</a> -->
+			<div class="row justify-content-center">
+				<div class="col-md-10 text-center ftco-animate">
+					<p class="lead" style="font-size: 18px; line-height: 1.8; color: #333;">A tranquil haven nestled at the foothills of Mount Kenya, Lusoi Gardens, where the earth sings and the air is crisp, is a sanctuary for families and friends to reconnect, recharge, and create lasting memories. Whether you are sipping herbal tea by the fire pit or hiking towards the river, Lusoi Gardens is where nature nurtures the soul.</p>
+					<p class="lead mt-4" style="font-size: 18px; line-height: 1.8; color: #333;">At Lusoi Gardens, we believe in the healing power of fresh air, wholesome food, and heartfelt hospitality. Our cozy cabins, garden-to-table meals, and curated experiences are crafted to help you unwind, bond, and rediscover joy.</p>
+				</div>
 			</div>
-				<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
-          <div class="heading-section heading-section-wo-line pt-md-5 mb-5">
-          	<div class="ml-md-0">
-	          	<span class="subheading">Welcome to Lusoi Gardens</span>
-	            <h2 class="mb-4">Welcome To Our Resort</h2>
-            </div>
-          </div>
-          <div class="pb-md-5">
-						<p>Nestled in the heart of Kenya’s breathtaking countryside, Lusoi Gardens is the perfect escape for families, friends, and explorers. Located just a short drive from Mount Kenya, our scenic retreat combines relaxation, adventure, and a true taste of the outdoors.</p>
-						<p>Whether you’re looking for peaceful garden walks, exciting outdoor fun, or easy access to some of Kenya’s most iconic destinations — Lusoi Gardens has something for everyone.</p>
-						<ul class="ftco-social d-flex">
-              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-            </ul>
+		</div>
+	</section>
+
+	<!-- Tile Style Section -->
+	<section class="ftco-section ftco-no-pt ftco-no-pb">
+		<div class="container-fluid px-0">
+			<!-- Location & Access Tile -->
+			<div class="row no-gutters">
+				<!-- Left: Brand Color Text Panel -->
+				<div class="col-md-6 tile-text-panel tile-dark" style="background-color: #5c4a3a; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+					<div class="tile-content">
+						<h2 class="mb-3" style="font-size: 48px; color: #fff; font-weight: 400; line-height: 1.2;">Location & Access</h2>
+						<p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: rgba(255, 255, 255, 0.8); font-weight: 500;">GETTING HERE</p>
+						<div style="font-family: 'Poppins', Arial, sans-serif; color: #fff; font-size: 16px; line-height: 2;">
+							<p class="mb-2"><strong>Nairobi CBD:</strong> Approximately 150 km (2.5-3 hours drive)</p>
+							<p class="mb-2"><strong>Jomo Kenyatta International Airport (JKIA):</strong> Approximately 165 km (3-3.5 hours drive)</p>
+							<p class="mb-2"><strong>Wilson Airport:</strong> Approximately 155 km (2.5-3 hours drive)</p>
+							<p><strong>Nyeri Town:</strong> Approximately 25 km (30-40 minutes drive)</p>
+						</div>
 					</div>
+				</div>
+				<!-- Right: Image Panel -->
+				<div class="col-md-6 tile-image-panel" style="background-image: url(/images/gardens9.jpg); background-size: cover; background-position: center; min-height: 400px;">
+				</div>
+			</div>
+			
+			<!-- Weather Patterns Tile -->
+			<div class="row no-gutters tile-row-swap">
+				<!-- Left: Image Panel -->
+				<div class="col-md-6 tile-image-panel" style="background-image: url(/images/gardens6.jpg); background-size: cover; background-position: center; min-height: 400px;">
+				</div>
+				<!-- Right: Light Beige Text Panel -->
+				<div class="col-md-6 tile-text-panel tile-light" style="background-color: #f5f5f0; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+					<div class="tile-content">
+						<h2 class="mb-3" style="font-size: 48px; color: #2c2c2c; font-weight: 400; line-height: 1.2;">Weather Patterns</h2>
+						<p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: #666; font-weight: 500;">CLIMATE & SEASONS</p>
+						<p style="font-family: 'Poppins', Arial, sans-serif; color: #2c2c2c; font-size: 16px; line-height: 1.8;">The foothills of Mount Kenya enjoy a temperate climate with cool mornings and evenings. Daytime temperatures are generally pleasant, making it ideal for outdoor activities. The area experiences two rainy seasons: long rains (March-May) and short rains (October-December).</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- What to Wear Tile -->
+			<div class="row no-gutters">
+				<!-- Left: Brand Color Text Panel -->
+				<div class="col-md-6 tile-text-panel tile-dark" style="background-color: #5c4a3a; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+					<div class="tile-content">
+						<h2 class="mb-3" style="font-size: 48px; color: #fff; font-weight: 400; line-height: 1.2;">What to Wear</h2>
+						<p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: rgba(255, 255, 255, 0.8); font-weight: 500;">PACKING ESSENTIALS</p>
+						<p style="font-family: 'Poppins', Arial, sans-serif; color: #fff; font-size: 16px; line-height: 1.8;">We recommend packing layers for varying temperatures throughout the day. Bring comfortable walking shoes for nature trails, warm clothing for cool evenings, and light rain gear during the rainy seasons. Don't forget sun protection and a hat for daytime activities.</p>
+					</div>
+				</div>
+				<!-- Right: Image Panel -->
+				<div class="col-md-6 tile-image-panel" style="background-image: url(/images/bird-2.jpg); background-size: cover; background-position: center; min-height: 400px;">
 				</div>
 			</div>
 		</div>
@@ -57,8 +94,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="container">
     	<div class="row justify-content-center mb-5 pb-3">
         <div class="col-md-7 heading-section text-center ftco-animate">
-        	<span class="subheading">Welcome to Lusoi Gardens</span>
-          <h2 class="mb-4">Where Adventure Meets Serenity.</h2>
+        	<span class="subheading">Our Values</span>
+          <h2 class="mb-4">Core Values That Guide Us</h2>
+          <p class="mt-4">Togetherness • Freshness • Serenity • Authenticity • Memory-making</p>
         </div>
       </div>  
       <div class="row d-flex">
@@ -252,36 +290,36 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 			  <!-- <h2><span>Instagram</span></h2> -->
 			</div>
 		  </div>
-		  <div class="row no-gutters">
-			<div class="col-sm-12 col-md ftco-animate">
+		  <div class="instagram-carousel owl-carousel owl-theme">
+			<div class="item">
 			  <a href="/images/gardens01.jpg" class="insta-img image-popup" style="background-image: url(/images/gardens01.jpg);">
 				<div class="icon d-flex justify-content-center">
 				  <span class="icon-instagram align-self-center"></span>
 				</div>
 			  </a>
 			</div>
-			<div class="col-sm-12 col-md ftco-animate">
+			<div class="item">
 			  <a href="/images/gardens8.jpg" class="insta-img image-popup" style="background-image: url(/images/gardens8.jpg);">
 				<div class="icon d-flex justify-content-center">
 				  <span class="icon-instagram align-self-center"></span>
 				</div>
 			  </a>
 			</div>
-			<div class="col-sm-12 col-md ftco-animate">
+			<div class="item">
 			  <a href="/images/gardens5.jpg" class="insta-img image-popup" style="background-image: url(/images/gardens5.jpg);">
 				<div class="icon d-flex justify-content-center">
 				  <span class="icon-instagram align-self-center"></span>
 				</div>
 			  </a>
 			</div>
-			<div class="col-sm-12 col-md ftco-animate">
+			<div class="item">
 			  <a href="/images/gardens7.jpg" class="insta-img image-popup" style="background-image: url(/images/gardens7.jpg);">
 				<div class="icon d-flex justify-content-center">
 				  <span class="icon-instagram align-self-center"></span>
 				</div>
 			  </a>
 			</div>
-			<div class="col-sm-12 col-md ftco-animate">
+			<div class="item">
 			  <a href="/images/bird3.jpg" class="insta-img image-popup" style="background-image: url(/images/bird3.jpg);">
 				<div class="icon d-flex justify-content-center">
 				  <span class="icon-instagram align-self-center"></span>
@@ -292,4 +330,116 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 		</div>
 	  </section>
 </BaseLayout>
+
+<style>
+	/* Tile Section Responsive Styles */
+	.tile-text-panel,
+	.tile-image-panel {
+		min-height: 400px;
+	}
+
+	@media (max-width: 767.98px) {
+		.tile-text-panel {
+			min-height: 350px;
+			padding: 40px 30px !important;
+		}
+		
+		.tile-text-panel h2 {
+			font-size: 32px !important;
+		}
+		
+		.tile-image-panel {
+			min-height: 300px;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.tile-text-panel {
+			min-height: 300px;
+			padding: 30px 20px !important;
+		}
+		
+		.tile-text-panel h2 {
+			font-size: 28px !important;
+		}
+		
+		.tile-image-panel {
+			min-height: 250px;
+		}
+	}
+
+	/* Ensure tiles stack on mobile */
+	@media (max-width: 767.98px) {
+		.tile-text-panel,
+		.tile-image-panel {
+			width: 100% !important;
+		}
+		
+		/* Reorder tiles on mobile to ensure alternation */
+		.tile-row-swap {
+			flex-direction: column;
+		}
+		
+		.tile-row-swap .tile-image-panel {
+			order: 2;
+		}
+		
+		.tile-row-swap .tile-text-panel {
+			order: 1;
+		}
+	}
+	
+	/* Instagram carousel styles */
+	.instagram-carousel .item {
+		padding: 0 5px;
+	}
+	
+	.instagram-carousel .insta-img {
+		height: 300px;
+		display: block;
+	}
+</style>
+
+<script is:inline>
+	(function() {
+		function initInstagramCarousel() {
+			var $ = window.jQuery || window.$;
+			if ($ && $.fn && $.fn.owlCarousel) {
+				$('.instagram-carousel').owlCarousel({
+					loop: true,
+					autoplay: true,
+					autoplayTimeout: 3000,
+					autoplayHoverPause: false,
+					margin: 10,
+					nav: false,
+					dots: false,
+					items: 4,
+					smartSpeed: 1000,
+					responsive: {
+						0: {
+							items: 1
+						},
+						600: {
+							items: 2
+						},
+						1000: {
+							items: 3
+						},
+						1200: {
+							items: 4
+						}
+					}
+				});
+			} else {
+				setTimeout(initInstagramCarousel, 100);
+			}
+		}
+		
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initInstagramCarousel);
+		} else {
+			initInstagramCarousel();
+		}
+	})();
+</script>
 
