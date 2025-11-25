@@ -3,7 +3,16 @@ import { sendEmail } from '../../utils/email';
 
 export const prerender = false;
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
+  // Get environment variables from Cloudflare runtime
+  const env = (locals as any).runtime?.env || {};
+  
+  const smtpHost = env.ZOHO_SMTP_HOST || import.meta.env.ZOHO_SMTP_HOST || process.env.ZOHO_SMTP_HOST;
+  const smtpPort = parseInt(env.ZOHO_SMTP_PORT || import.meta.env.ZOHO_SMTP_PORT || process.env.ZOHO_SMTP_PORT || '587');
+  const smtpUser = env.ZOHO_SMTP_USER || import.meta.env.ZOHO_SMTP_USER || process.env.ZOHO_SMTP_USER;
+  const smtpPass = env.ZOHO_SMTP_PASS || import.meta.env.ZOHO_SMTP_PASS || process.env.ZOHO_SMTP_PASS;
+  const fromEmail = env.ZOHO_FROM_EMAIL || import.meta.env.ZOHO_FROM_EMAIL || process.env.ZOHO_FROM_EMAIL;
+  const toEmail = env.ZOHO_TO_EMAIL || import.meta.env.ZOHO_TO_EMAIL || process.env.ZOHO_TO_EMAIL;
   try {
     let formData: FormData;
     const contentType = request.headers.get('content-type') || '';
@@ -100,6 +109,13 @@ export const POST: APIRoute = async ({ request }) => {
     await sendEmail({
       subject: `Guest Feedback: ${name} - ${formatRating(rating)} Rating`,
       html: htmlContent,
+    }, {
+      smtpHost: smtpHost || '',
+      smtpPort,
+      smtpUser: smtpUser || '',
+      smtpPass: smtpPass || '',
+      fromEmail: fromEmail || '',
+      toEmail: toEmail || '',
     });
 
     return new Response(
