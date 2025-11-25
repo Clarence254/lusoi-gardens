@@ -3,7 +3,14 @@ main = "./dist/_worker.js/index.js"
 compatibility_date = "2025-11-25"
 compatibility_flags = ["nodejs_compat"]
 
+# Serve static assets from dist directory
+site = { bucket = "./dist" }
+
 # Cloudflare Pages configuration
 routes = [
   { pattern = "lusoigardens.com/*", zone_id = "546177b78b4ad09709421913cbded606" }
 ]
+
+[build]
+command = "npm run build"
+cwd = "./"
