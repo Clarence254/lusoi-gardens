@@ -5,3 +5,13 @@ compatibility_flags = ["nodejs_compat", "disable_nodejs_process_v2"]
 # Cloudflare Pages configuration
 # Static assets are automatically served from dist directory
 pages_build_output_dir = "./dist"
+
+# Environment variables (for non-sensitive values)
+# Note: Secrets (API keys, passwords) should be set using:
+#   wrangler secret put RESEND_API_KEY
+# Or via Cloudflare Dashboard → Pages → Settings → Environment Variables
+# 
+# Example variables (uncomment and set values):
+# [vars]
+# FROM_EMAIL = "noreply@lusoigardens.com"
+# TO_EMAIL = "admin@lusoigardens.com"

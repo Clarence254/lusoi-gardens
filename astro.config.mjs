@@ -20,9 +20,6 @@ export default defineConfig({
   vite: {
     optimizeDeps: {
       exclude: ['jquery', 'popper.js']
-    },
-    ssr: {
-      noExternal: ['nodemailer']
     }
   }
 });

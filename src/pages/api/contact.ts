@@ -7,12 +7,19 @@ export const POST: APIRoute = async ({ request, locals }) => {
   // Get environment variables from Cloudflare runtime
   const env = (locals as any).runtime?.env || {};
   
-  const smtpHost = env.ZOHO_SMTP_HOST || import.meta.env.ZOHO_SMTP_HOST || process.env.ZOHO_SMTP_HOST;
-  const smtpPort = parseInt(env.ZOHO_SMTP_PORT || import.meta.env.ZOHO_SMTP_PORT || process.env.ZOHO_SMTP_PORT || '587');
-  const smtpUser = env.ZOHO_SMTP_USER || import.meta.env.ZOHO_SMTP_USER || process.env.ZOHO_SMTP_USER;
-  const smtpPass = env.ZOHO_SMTP_PASS || import.meta.env.ZOHO_SMTP_PASS || process.env.ZOHO_SMTP_PASS;
-  const fromEmail = env.ZOHO_FROM_EMAIL || import.meta.env.ZOHO_FROM_EMAIL || process.env.ZOHO_FROM_EMAIL;
-  const toEmail = env.ZOHO_TO_EMAIL || import.meta.env.ZOHO_TO_EMAIL || process.env.ZOHO_TO_EMAIL;
+  // Support Resend (recommended) or SendGrid
+  const resendApiKey = env.RESEND_API_KEY || import.meta.env.RESEND_API_KEY || process.env.RESEND_API_KEY;
+  const sendgridApiKey = env.SENDGRID_API_KEY || import.meta.env.SENDGRID_API_KEY || process.env.SENDGRID_API_KEY;
+  
+  const fromEmail = env.FROM_EMAIL || import.meta.env.FROM_EMAIL || process.env.FROM_EMAIL || env.ZOHO_FROM_EMAIL || import.meta.env.ZOHO_FROM_EMAIL || process.env.ZOHO_FROM_EMAIL;
+  const toEmail = env.TO_EMAIL || import.meta.env.TO_EMAIL || process.env.TO_EMAIL || env.ZOHO_TO_EMAIL || import.meta.env.ZOHO_TO_EMAIL || process.env.ZOHO_TO_EMAIL;
+  
+  console.log('Email config check:', {
+    hasResend: !!resendApiKey,
+    hasSendGrid: !!sendgridApiKey,
+    hasFrom: !!fromEmail,
+    hasTo: !!toEmail,
+  });
   try {
     let formData: FormData;
     const contentType = request.headers.get('content-type') || '';
@@ -91,10 +98,8 @@ export const POST: APIRoute = async ({ request, locals }) => {
       subject: `Contact Form: ${subject}`,
       html: htmlContent,
     }, {
-      smtpHost: smtpHost || '',
-      smtpPort,
-      smtpUser: smtpUser || '',
-      smtpPass: smtpPass || '',
+      resendApiKey: resendApiKey || undefined,
+      sendgridApiKey: sendgridApiKey || undefined,
       fromEmail: fromEmail || '',
       toEmail: toEmail || '',
     });
