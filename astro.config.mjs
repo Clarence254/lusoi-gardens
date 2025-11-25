@@ -6,7 +6,7 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://lusoigardens.com',
-  output: 'hybrid', // Hybrid mode: prerender static pages, SSR for API routes
+  output: 'server', // Server mode for API routes - static assets served automatically by Pages
   adapter: cloudflare(),
   // Uncomment below and comment out cloudflare() above to switch to Netlify
   // adapter: netlify(),

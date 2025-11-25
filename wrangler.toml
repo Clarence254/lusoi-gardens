@@ -2,8 +2,9 @@ name = "lusoi-gardens"
 compatibility_date = "2025-11-25"
 compatibility_flags = ["nodejs_compat"]
 
-# Cloudflare Pages automatically serves static assets from dist directory
-# No need for 'site' configuration when using Cloudflare Pages
+# Cloudflare Pages configuration
+# Static assets are automatically served from dist directory
+pages_build_output_dir = "./dist"
 
 [build]
 command = "npm run build"
