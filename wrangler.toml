@@ -1,0 +1,14 @@
+name = "lusoi-gardens"
+main = "./dist/server/entry.mjs"
+compatibility_date = "2025-11-25"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+route = "lusoigardens.com/*"
+zone_id = "546177b78b4ad09709421913cbded606"
+
+# Static files configuration
+[env.production.build]
+command = "npm run build"
+cwd = "./"
+root = "."

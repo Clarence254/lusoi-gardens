@@ -1,12 +1,15 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import netlify from '@astrojs/netlify';
+import cloudflare from '@astrojs/cloudflare';
+// import netlify from '@astrojs/netlify';
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://lusoigardens.com',
   output: 'server', // Server-rendered mode required for API routes
-  adapter: netlify(),
+  adapter: cloudflare(),
+  // Uncomment below and comment out cloudflare() above to switch to Netlify
+  // adapter: netlify(),
   integrations: [
     sitemap({
       changefreq: 'weekly',
