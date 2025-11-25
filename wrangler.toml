@@ -1,5 +1,5 @@
 name = "lusoi-gardens"
-main = "./dist/server/entry.mjs"
+main = "./dist/_worker.js/index.js"
 compatibility_date = "2025-11-25"
 compatibility_flags = ["nodejs_compat"]
 
