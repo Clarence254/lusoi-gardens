@@ -1,6 +1,6 @@
 name = "lusoi-gardens"
 compatibility_date = "2025-11-25"
-compatibility_flags = ["nodejs_compat"]
+compatibility_flags = ["nodejs_compat", "disable_nodejs_process_v2"]
 
 # Cloudflare Pages configuration
 # Static assets are automatically served from dist directory
