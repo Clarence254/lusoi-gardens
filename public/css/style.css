@@ -8193,7 +8193,7 @@ h1, h2, h3, h4, h5,
     padding-bottom: 1.5rem;
     padding-left: 20px;
     padding-right: 20px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #2d6b32;  /* CLARO CHANGE #b69100 */
     font-weight: 400;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
@@ -8261,7 +8261,7 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
     .ftco-navbar-light.scrolled .nav-item.active > a {
-      color: #b69100 !important; }
+      color: #2d6b32 !important; } /* CLARO CHANGE #b69100*/
     .ftco-navbar-light.scrolled .nav-item.cta > a {
       color: #fff !important;
       background: #b69100;
