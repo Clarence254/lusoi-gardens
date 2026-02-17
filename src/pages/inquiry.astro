@@ -3,10 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout 
-  title="Inquiry - Get in Touch | Lusoi Gardens"
-  activePage="contact"
-  description="Have questions about Lusoi Gardens? Send us an inquiry about accommodations, activities, events, or special requests. We're here to help plan your perfect stay."
-  keywords="Lusoi Gardens inquiry, booking inquiry, resort questions, accommodation inquiry Kenya"
+  title="Contact Lusoi Gardens - Get in Touch | Mount Kenya Resort"
+  activePage="inquiry"
+  description="Contact Lusoi Gardens for bookings, inquiries, or more information about our nature retreat near Mount Kenya. Located in Nyeri, Kenya. We're here to help plan your perfect getaway."
+  keywords="contact Lusoi Gardens, Lusoi Gardens booking, Mount Kenya resort contact, Nyeri Kenya resort, resort inquiries, accommodation booking Kenya"
   ogImage="/images/landscape-2.jpg"
 >
 	<div class="hero-wrap" style="background-image: url('/images/landing-3.jpg');">
@@ -15,8 +15,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
         <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
         	<div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Inquiry</span></p>
-            <h1 class="mb-4 bread">Send Us an Inquiry</h1>
+            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Contact</span></p>
+            <h1 class="mb-4 bread">Contact us</h1>
           </div>
         </div>
       </div>
@@ -25,82 +25,59 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 	<section class="ftco-section contact-section bg-light">
     <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center">
-          <h2 class="mb-4">We're Here to Help</h2>
-          <p>Have questions about accommodations, activities, events, or special requests? Fill out the form below and we'll get back to you as soon as possible.</p>
+      <div class="row d-flex mb-5 contact-info">
+        <div class="col-md-12 mb-4">
+          <h2 class="h3">Contact Information</h2>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-md-4 d-flex">
+        	<div class="info bg-white p-4">
+            <p><span>Address:</span> Nyeri, Kenya</p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+        	<div class="info bg-white p-4">
+            <p><span>Phone:</span> <a href="tel://+254 797 590 865">+254 797 590 865</a></p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+        	<div class="info bg-white p-4">
+            <p><span>Email:</span> <a href="mailto:reservations@lusoigardens.com">reservations@lusoigardens.com</a></p>
+          </div>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <form id="inquiry-form" class="bg-white p-5 contact-form">
+      <div class="row block-9">
+        <div class="col-md-6 order-md-last d-flex">
+          <form id="contact-form" class="bg-white p-5 contact-form">
             <div id="form-message" class="alert" style="display: none;"></div>
             <div class="form-group">
-              <label for="name">Your Name *</label>
               <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
             </div>
             <div class="form-group">
-              <label for="email">Your Email *</label>
               <input type="email" name="email" id="email" class="form-control" placeholder="Your Email" required>
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" name="phone" id="phone" class="form-control" placeholder="Your Phone Number">
-            </div>
-            <div class="form-group">
-              <label for="inquiry-type">Inquiry Type *</label>
-              <select name="inquiry-type" id="inquiry-type" class="form-control" required>
-                <option value="">Select Inquiry Type</option>
-                <option value="accommodation">Accommodation / Room Booking</option>
-                <option value="activities">Activities & Experiences</option>
-                <option value="events">Meetings & Events</option>
-                <option value="dining">Dining & Restaurant</option>
-                <option value="special-request">Special Request</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="check-in">Preferred Check-in Date</label>
-              <input type="date" name="check-in" id="check-in" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="check-out">Preferred Check-out Date</label>
-              <input type="date" name="check-out" id="check-out" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="guests">Number of Guests</label>
-              <input type="number" name="guests" id="guests" class="form-control" placeholder="Number of Guests" min="1">
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject *</label>
               <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" required>
             </div>
             <div class="form-group">
-              <label for="message">Your Message *</label>
-              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Please provide details about your inquiry..." required></textarea>
+              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
             </div>
             <div class="form-group">
-              <input type="submit" value="Send Inquiry" class="btn btn-primary py-3 px-5" id="submit-btn">
+              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" id="submit-btn">
             </div>
           </form>
+        
         </div>
-      </div>
-      <div class="row justify-content-center mt-5">
-        <div class="col-md-8 text-center">
-          <h3 class="mb-4">Or Contact Us Directly</h3>
-          <p class="mb-3">
-            <strong>Phone:</strong> <a href="tel://+254797590865">+254 797 590 865</a><br>
-            <strong>Email:</strong> <a href="mailto:reservations@lusoigardens.com">reservations@lusoigardens.com</a>
-          </p>
-          <a href="/contact" class="btn btn-secondary py-2 px-4 mr-2">View Contact Page</a>
-          <a href="/" class="btn btn-primary py-2 px-4">Return Home</a>
+
+        <div class="col-md-6 d-flex">
+        	<iframe src="https://www.google.com/maps?q=-0.259712,37.048564&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </div>
   </section>
 
   <script>
-    const form = document.getElementById('inquiry-form') as HTMLFormElement;
+    const form = document.getElementById('contact-form') as HTMLFormElement;
     const messageDiv = document.getElementById('form-message') as HTMLDivElement;
     const submitBtn = document.getElementById('submit-btn') as HTMLInputElement;
 
@@ -117,7 +94,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       const formData = new FormData(form);
       
       try {
-        const response = await fetch('/api/inquiry', {
+        const response = await fetch('/api/contact', {
           method: 'POST',
           body: formData,
         });
@@ -136,13 +113,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }
       } catch (error) {
         messageDiv.className = 'alert alert-danger';
-        messageDiv.textContent = 'An error occurred while sending your inquiry. Please try again later.';
+        messageDiv.textContent = 'An error occurred while sending your message. Please try again later.';
         messageDiv.style.display = 'block';
       } finally {
         submitBtn.disabled = false;
-        submitBtn.value = 'Send Inquiry';
+        submitBtn.value = 'Send Message';
       }
     });
   </script>
 </BaseLayout>
-
