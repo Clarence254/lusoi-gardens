@@ -79,6 +79,31 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <!-- Fire Pit Experience - Image Right -->
+  <section class="ftco-section ftco-no-pb">
+    <div class="container-fluid px-0">
+      <div class="row no-gutters align-items-stretch">
+        <div class="col-md-6 d-flex align-items-center ftco-animate">
+          <div class="dining-detail-text">
+            <h3>The Fire Pit Experience</h3>
+            <p>Create wonderful memories with friends and family, amid the warm, inviting crackling of the lit bonfire, while indulging in our Fire Pit Experience menu which includes:</p>
+            <ul class="fire-pit-menu">
+              <li>1 Roasted Goat</li>
+              <li>Various select accompaniments: Potato Wedges, Roast Potatoes, Mukimo, Ugali</li>
+              <li>Vegetable of the Day</li>
+              <li>Garden Salad of the Day</li>
+            </ul>
+            <p class="fire-pit-price">KES 25,000</p>
+            <a href="/contact" class="btn fire-pit-btn mt-3">Book This Experience</a>
+          </div>
+        </div>
+        <div class="col-md-6 ftco-animate">
+          <div class="dining-detail-img" style="background-image: url(/images/fire-pit.jpg);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Meal times -->
   <section class="ftco-section dining-times-section">
     <div class="container">
@@ -191,6 +216,56 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     font-size: 15px;
     line-height: 1.9;
     margin-bottom: 1.2em;
+  }
+
+  /* Fire Pit Experience */
+  .fire-pit-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #666666;
+  }
+
+  .fire-pit-menu li {
+    padding: 0.3em 0;
+    padding-left: 1.5em;
+    position: relative;
+  }
+
+  .fire-pit-menu li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #b69100;
+    font-weight: 700;
+  }
+
+  .fire-pit-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #b69100;
+    margin-bottom: 0.5em;
+  }
+
+  .fire-pit-btn {
+    background-color: #b69100;
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    transition: background-color 0.3s;
+  }
+
+  .fire-pit-btn:hover {
+    background-color: #8a6e00;
+    color: #fff;
   }
 
   /* Meal times */
