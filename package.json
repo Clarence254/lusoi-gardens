@@ -19,5 +19,8 @@
   },
   "optionalDependencies": {
     "@esbuild/win32-x64": "^0.25.12"
+  },
+  "overrides": {
+    "undici": ">=7.24.0"
   }
 }
