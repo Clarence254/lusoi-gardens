@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout 
@@ -9,33 +11,20 @@ import PageHero from '../components/PageHero.astro';
   description="Read our latest blog posts about Lusoi Gardens, Mount Kenya adventures, travel tips, and stories from our nature retreat. Stay updated with news and insights from Kenya's beautiful countryside."
   keywords="Lusoi Gardens blog, Mount Kenya travel blog, Kenya resort news, nature retreat stories, travel tips Kenya, Mount Kenya adventures, resort blog"
   ogImage="/images/image_1.jpg"
+
+  enableGsap={true}
+  gsapPage="marketing"
 >
-  <PageHero title="Blog" breadcrumb="Blog" backgroundImage="/images/bg_1.jpg" />
+  <PageHero title="Blog" backgroundImage="/images/bg_1.jpg" />
 
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-        	<div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Blog</span></p>
-            <h1 class="mb-4 bread">Blog</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <PageIntro eyebrow="Read Blog" title="Recent Blog" narrow />
 
-	<section class="ftco-section">
+	<section class="ftco-section lusoi-blog-section">
     <div class="container">
-      <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-        	<span class="subheading">Read Blog</span>
-          <h2>Recent Blog</h2>
-        </div>
-      </div>
       <div class="row d-flex">
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="/blog-single" class="block-20" style="background-image: url('/images/image_1.jpg');">
+            <a href="/blog-single" class="block-20" style={{ backgroundImage: "url('/images/image_1.jpg')" }}>
             </a>
             <div class="text mt-3 text-center">
             	<div class="meta mb-2">
@@ -50,7 +39,7 @@ import PageHero from '../components/PageHero.astro';
         </div>
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="/blog-single" class="block-20" style="background-image: url('/images/image_2.jpg');">
+            <a href="/blog-single" class="block-20" style={{ backgroundImage: "url('/images/image_2.jpg')" }}>
             </a>
             <div class="text mt-3 text-center">
             	<div class="meta mb-2">
@@ -65,7 +54,7 @@ import PageHero from '../components/PageHero.astro';
         </div>
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="/blog-single" class="block-20" style="background-image: url('/images/image_3.jpg');">
+            <a href="/blog-single" class="block-20" style={{ backgroundImage: "url('/images/image_3.jpg')" }}>
             </a>
             <div class="text mt-3 text-center">
             	<div class="meta mb-2">
@@ -81,7 +70,7 @@ import PageHero from '../components/PageHero.astro';
 
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="/blog-single" class="block-20" style="background-image: url('/images/image_4.jpg');">
+            <a href="/blog-single" class="block-20" style={{ backgroundImage: "url('/images/image_4.jpg')" }}>
             </a>
             <div class="text mt-3 text-center">
             	<div class="meta mb-2">
@@ -96,7 +85,7 @@ import PageHero from '../components/PageHero.astro';
         </div>
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="/blog-single" class="block-20" style="background-image: url('/images/image_5.jpg');">
+            <a href="/blog-single" class="block-20" style={{ backgroundImage: "url('/images/image_5.jpg')" }}>
             </a>
             <div class="text mt-3 text-center">
             	<div class="meta mb-2">
@@ -111,7 +100,7 @@ import PageHero from '../components/PageHero.astro';
         </div>
         <div class="col-md-4 d-flex ftco-animate">
           <div class="blog-entry align-self-stretch">
-            <a href="/blog-single" class="block-20" style="background-image: url('/images/image_6.jpg');">
+            <a href="/blog-single" class="block-20" style={{ backgroundImage: "url('/images/image_6.jpg')" }}>
             </a>
             <div class="text mt-3 text-center">
             	<div class="meta mb-2">
@@ -142,5 +131,10 @@ import PageHero from '../components/PageHero.astro';
       </div>
     </div>
   </section>
+  <PageCta
+    title="Ready to Visit?"
+    description="Experience Lusoi Gardens for yourself — we'd love to welcome you."
+    buttonText="Get in Touch"
+  />
 </BaseLayout>
 

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout 
@@ -9,31 +11,16 @@ import PageHero from '../components/PageHero.astro';
   description="Discover exciting leisure activities at Lusoi Gardens. Enjoy nature walks, kids park, mountain biking, evening bonfires, and more outdoor adventures for all ages near Mount Kenya."
   keywords="leisure activities Lusoi Gardens, outdoor activities Kenya, nature walks Mount Kenya, kids park Nanyuki, mountain biking Kenya, family activities, adventure activities Kenya, outdoor fun"
   ogImage="/images/kids-park.jpeg"
+
+  enableGsap={true}
+  gsapPage="marketing"
 >
-  <PageHero title="Leisure Activities" breadcrumb="Leisure Activities" backgroundImage="/images/landing-3.jpg" />
+  <PageHero title="Leisure Activities" backgroundImage="/images/landing-3.jpg" />
 
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-        	<div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Leisure Activities</span></p>
-            <h1 class="mb-4 bread">Leisure Activities</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Intro Section -->
-  <section class="ftco-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-10 text-center ftco-animate">
-          <p class="lead" style="font-size: 18px; line-height: 1.8; color: #333;">At Lusoi Gardens, we offer a diverse range of leisure activities designed to connect you with nature, create lasting memories, and provide moments of adventure and relaxation. Whether you're seeking outdoor exploration, family fun, or peaceful moments by the fire, our carefully curated experiences blend seamlessly with the natural beauty of Mount Kenya's foothills.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageIntro
+    title="Experiences in Nature"
+    lead="At Lusoi Gardens, we offer a diverse range of leisure activities designed to connect you with nature, create lasting memories, and provide moments of adventure and relaxation. Whether you're seeking outdoor exploration, family fun, or peaceful moments by the fire, our carefully curated experiences blend seamlessly with the natural beauty of Mount Kenya's foothills."
+  />
 
   <!-- Tile Style Section -->
   <section class="ftco-section ftco-no-pt ftco-no-pb">
@@ -41,29 +28,29 @@ import PageHero from '../components/PageHero.astro';
       <!-- Nature Walks & Hiking Tile -->
       <div class="row no-gutters">
         <!-- Left: Brand Color Text Panel -->
-        <div class="col-md-6 tile-text-panel tile-dark" style="background-color: #5c4a3a; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+        <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--dark">
           <div class="tile-content">
-            <h2 class="mb-3" style="font-size: 48px; color: #fff; font-weight: 400; line-height: 1.2;">Nature Walks & Hiking</h2>
-            <p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: rgba(255, 255, 255, 0.8); font-weight: 500;">EXPLORE THE TRAILS</p>
-            <p style="font-family: 'Poppins', Arial, sans-serif; color: #fff; font-size: 16px; line-height: 1.8;">Guided nature walks along River Nairobi and through Ngare Ndare Forest. Discover waterfalls, canopy walkways, and diverse wildlife. Perfect for bird watching and photography with designated photo stops along the trails.</p>
+            <h2 class="mb-3">Nature Walks & Hiking</h2>
+            <p class="lusoi-tile-eyebrow mb-4">EXPLORE THE TRAILS</p>
+            <p>Guided nature walks along River Nairobi and through Ngare Ndare Forest. Discover waterfalls, canopy walkways, and diverse wildlife. Perfect for bird watching and photography with designated photo stops along the trails.</p>
           </div>
         </div>
         <!-- Right: Image Panel -->
-        <div class="col-md-6 tile-image-panel" style="background-image: url(/images/nature-walk.jpg); background-size: cover; background-position: center; min-height: 400px;">
+        <div class="col-md-6 lusoi-tile-img">
         </div>
       </div>
       
       <!-- Restaurant Tile -->
       <div class="row no-gutters tile-row-swap">
         <!-- Left: Image Panel -->
-        <div class="col-md-6 tile-image-panel" style="background-image: url(/images/restaurant-1.jpg); background-size: cover; background-position: center; min-height: 400px;">
+        <div class="col-md-6 lusoi-tile-img">
         </div>
         <!-- Right: Light Beige Text Panel -->
-        <div class="col-md-6 tile-text-panel tile-light" style="background-color: #f5f5f0; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+        <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--light">
           <div class="tile-content">
-            <h2 class="mb-3" style="font-size: 48px; color: #2c2c2c; font-weight: 400; line-height: 1.2;">Restaurant</h2>
-            <p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: #666; font-weight: 500;">FRESH LOCAL CUISINE</p>
-            <p style="font-family: 'Poppins', Arial, sans-serif; color: #2c2c2c; font-size: 16px; line-height: 1.8;">Savor a delicious meal made with ingredients harvested directly from our on-site farm and local producers. Our restaurant offers a seasonal menu that highlights the region’s finest flavors, served in a warm and inviting atmosphere.</p>
+            <h2 class="mb-3">Restaurant</h2>
+            <p class="lusoi-tile-eyebrow mb-4">FRESH LOCAL CUISINE</p>
+            <p>Savor a delicious meal made with ingredients harvested directly from our on-site farm and local producers. Our restaurant offers a seasonal menu that highlights the region’s finest flavors, served in a warm and inviting atmosphere.</p>
           </div>
         </div>
       </div>
@@ -71,92 +58,39 @@ import PageHero from '../components/PageHero.astro';
       <!-- Kids Activities Tile -->
       <div class="row no-gutters">
         <!-- Left: Brand Color Text Panel -->
-        <div class="col-md-6 tile-text-panel tile-dark" style="background-color: #5c4a3a; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+        <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--dark">
           <div class="tile-content">
-            <h2 class="mb-3" style="font-size: 48px; color: #fff; font-weight: 400; line-height: 1.2;">Lush Gardens</h2>
-            <p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: rgba(255, 255, 255, 0.8); font-weight: 500;">PEACEFUL RETREAT</p>
-            <p style="font-family: 'Poppins', Arial, sans-serif; color: #fff; font-size: 16px; line-height: 1.8;">Stroll through beautifully curated gardens featuring native plants, flowering pathways, and quiet seating areas. A perfect setting for relaxation, photography, or simply enjoying the peaceful surroundings.</p>
+            <h2 class="mb-3">Lush Gardens</h2>
+            <p class="lusoi-tile-eyebrow mb-4">PEACEFUL RETREAT</p>
+            <p>Stroll through beautifully curated gardens featuring native plants, flowering pathways, and quiet seating areas. A perfect setting for relaxation, photography, or simply enjoying the peaceful surroundings.</p>
           </div>
         </div>
         <!-- Right: Image Panel -->
-        <div class="col-md-6 tile-image-panel" style="background-image: url(/images/nature-walk2.jpg); background-size: cover; background-position: center; min-height: 400px;">
+        <div class="col-md-6 lusoi-tile-img">
         </div>
       </div>
       
       <!-- Relaxation & Fireside Evenings Tile -->
       <div class="row no-gutters tile-row-swap">
         <!-- Left: Image Panel -->
-        <div class="col-md-6 tile-image-panel" style="background-image: url(/images/bonfire.jpg); background-size: cover; background-position: center; min-height: 400px;">
+        <div class="col-md-6 lusoi-tile-img">
         </div>
         <!-- Right: Light Beige Text Panel -->
-        <div class="col-md-6 tile-text-panel tile-light" style="background-color: #f5f5f0; min-height: 400px; display: flex; align-items: center; justify-content: center; padding: 60px;">
+        <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--light">
           <div class="tile-content">
-            <h2 class="mb-3" style="font-size: 48px; color: #2c2c2c; font-weight: 400; line-height: 1.2;">Relaxation & Fireside</h2>
-            <p class="mb-4" style="font-family: 'Poppins', Arial, sans-serif; text-transform: uppercase; font-size: 14px; letter-spacing: 2px; color: #666; font-weight: 500;">UNWIND & RECONNECT</p>
-            <p style="font-family: 'Poppins', Arial, sans-serif; color: #2c2c2c; font-size: 16px; line-height: 1.8;">Garden lounges, outdoor café, and cozy corners with hammocks and reading nooks. Fireside evenings with blankets, herbal tea, and storytelling under the stars. Perfect for group events and team-building. Available on request.</p>
+            <h2 class="mb-3">Relaxation & Fireside</h2>
+            <p class="lusoi-tile-eyebrow mb-4">UNWIND & RECONNECT</p>
+            <p>Garden lounges, outdoor café, and cozy corners with hammocks and reading nooks. Fireside evenings with blankets, herbal tea, and storytelling under the stars. Perfect for group events and team-building. Available on request.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <PageCta
+    title="Explore Our Experiences"
+    description="Plan your visit and discover everything Lusoi Gardens has to offer."
+    buttonText="Plan Your Visit"
+    buttonHref="/about"
+  />
 </BaseLayout>
-
-<style>
-	/* Tile Section Responsive Styles */
-	.tile-text-panel,
-	.tile-image-panel {
-		min-height: 400px;
-	}
-
-	@media (max-width: 767.98px) {
-		.tile-text-panel {
-			min-height: 350px;
-			padding: 40px 30px !important;
-		}
-		
-		.tile-text-panel h2 {
-			font-size: 32px !important;
-		}
-		
-		.tile-image-panel {
-			min-height: 300px;
-		}
-	}
-
-	@media (max-width: 575.98px) {
-		.tile-text-panel {
-			min-height: 300px;
-			padding: 30px 20px !important;
-		}
-		
-		.tile-text-panel h2 {
-			font-size: 28px !important;
-		}
-		
-		.tile-image-panel {
-			min-height: 250px;
-		}
-	}
-
-	/* Ensure tiles stack on mobile */
-	@media (max-width: 767.98px) {
-		.tile-text-panel,
-		.tile-image-panel {
-			width: 100% !important;
-		}
-		
-		/* Reorder tiles on mobile to ensure alternation */
-		.tile-row-swap {
-			flex-direction: column;
-		}
-		
-		.tile-row-swap .tile-image-panel {
-			order: 2;
-		}
-		
-		.tile-row-swap .tile-text-panel {
-			order: 1;
-		}
-	}
-</style>
 

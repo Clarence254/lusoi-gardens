@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout
@@ -12,18 +14,12 @@ import PageHero from '../components/PageHero.astro';
   enableGsap={true}
   gsapPage="marketing"
 >
-  <PageHero title="Plan Your Visit" breadcrumb="Plan Your Visit" backgroundImage="/images/landing-3.jpg" />
+  <PageHero title="Plan Your Visit" backgroundImage="/images/landing-3.jpg" />
 
-	<!-- Intro Section -->
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-10 text-center ftco-animate">
-					<p class="lead" style="font-size: 18px; line-height: 1.8; color: #333;">Ready to visit Lusoi Gardens? Whether you are planning a weekend family getaway, a mid-week corporate retreat, or a quiet escape with friends, this guide covers everything you need to know before you arrive, from how to get here and what the weather is like, to what to pack and when to visit.</p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<PageIntro
+		title="Plan Your Visit"
+		lead="Ready to visit Lusoi Gardens? Whether you are planning a weekend family getaway, a mid-week corporate retreat, or a quiet escape with friends, this guide covers everything you need to know before you arrive, from how to get here and what the weather is like, to what to pack and when to visit."
+	/>
 
 	<!-- Visitor's Guide - Alternating Blocks -->
 	<section class="why-stay-section">
@@ -42,7 +38,7 @@ import PageHero from '../components/PageHero.astro';
 			<div class="container-fluid px-0">
 				<div class="row no-gutters align-items-stretch">
 					<div class="col-md-6 ftco-animate">
-						<div class="why-stay-img" style="background-image: url(/images/exterior-5.jpg);"></div>
+						<div class="why-stay-img" style={{ backgroundImage: "url('/images/exterior-5.jpg')" }}></div>
 					</div>
 					<div class="col-md-6 d-flex align-items-center ftco-animate">
 						<div class="why-stay-text">
@@ -65,7 +61,7 @@ import PageHero from '../components/PageHero.astro';
 			<div class="container-fluid px-0">
 				<div class="row no-gutters align-items-stretch">
 					<div class="col-md-6 order-md-2 ftco-animate">
-						<div class="why-stay-img" style="background-image: url(/images/landing-1.jpg);"></div>
+						<div class="why-stay-img" style={{ backgroundImage: "url('/images/landing-1.jpg')" }}></div>
 					</div>
 					<div class="col-md-6 order-md-1 d-flex align-items-center ftco-animate">
 						<div class="why-stay-text">
@@ -82,7 +78,7 @@ import PageHero from '../components/PageHero.astro';
 			<div class="container-fluid px-0">
 				<div class="row no-gutters align-items-stretch">
 					<div class="col-md-6 ftco-animate">
-						<div class="why-stay-img" style="background-image: url(/images/interior-1.jpg);"></div>
+						<div class="why-stay-img" style={{ backgroundImage: "url('/images/interior-1.jpg')" }}></div>
 					</div>
 					<div class="col-md-6 d-flex align-items-center ftco-animate">
 						<div class="why-stay-text">
@@ -101,237 +97,10 @@ import PageHero from '../components/PageHero.astro';
 		</div>
 	</section>
 
-	<!-- CTA Section -->
-	<section class="ftco-section bg-light best-time-section">
-		<div class="container">
-		<div class="row justify-content-center">
-				<div class="col-md-8 text-center ftco-animate">
-					<h2>Ready to Experience Lusoi Gardens?</h2>
-					<p class="mt-3 mb-4">Start planning your perfect getaway in Kenya's highlands.</p>
-					<div class="cta-buttons">
-						<a href="/contact" class="btn btn-primary py-3 px-5 mr-3 mb-3">Make an Inquiry</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<PageCta
+		title="Ready to Experience Lusoi Gardens?"
+		description="Start planning your perfect getaway in Kenya's highlands."
+		buttonText="Make an Inquiry"
+	/>
 </BaseLayout>
 
-<style>
-	/* Why Stay With Us Section */
-	.why-stay-section {
-		padding: 0;
-		background-color: #ffffff;
-	}
-
-	.why-stay-header {
-		background-color: #b69100;
-		padding: 3em 0 2em 0;
-	}
-
-	.why-stay-header .heading-section h2 {
-		color: #ffffff;
-		font-family: 'Playfair Display', serif;
-	}
-
-	.why-stay-block {
-		margin-bottom: 0;
-	}
-
-	.why-stay-block .col-md-6:has(.why-stay-img) {
-		padding: 3em;
-	}
-
-	.why-stay-img {
-		background-size: cover;
-		background-position: center center;
-		min-height: 450px;
-		height: 100%;
-		position: relative;
-		border-radius: 4px;
-	}
-
-	.why-stay-text {
-		padding: 4em 5em;
-		max-width: 600px;
-	}
-
-	.why-stay-text h3 {
-		font-family: 'Playfair Display', serif;
-		font-size: 28px;
-		font-weight: 700;
-		color: #000000;
-		margin-bottom: 1.2em;
-		line-height: 1.4;
-		position: relative;
-		padding-bottom: 1em;
-	}
-
-	.why-stay-text h3::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 60px;
-		height: 2px;
-		background-color: #b69100;
-	}
-
-	.why-stay-text p {
-		font-family: 'Poppins', sans-serif;
-		font-size: 15px;
-		line-height: 1.9;
-		color: #666666;
-		margin-bottom: 2em;
-	}
-
-	.why-stay-text .btn-outline-dark {
-		border: 1px solid #000000;
-		color: #000000;
-		font-size: 13px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		font-weight: 400;
-		transition: all 0.3s ease;
-	}
-
-	.why-stay-text .btn-outline-dark:hover {
-		background-color: #b69100;
-		border-color: #b69100;
-		color: #ffffff;
-	}
-
-	/* Pack List */
-	.pack-list {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 2em 0;
-		font-family: 'Poppins', sans-serif;
-		font-size: 15px;
-		line-height: 1.9;
-		color: #666666;
-	}
-
-	.pack-list li {
-		padding: 0.3em 0;
-		padding-left: 1.5em;
-		position: relative;
-	}
-
-	.pack-list li::before {
-		content: '\2713';
-		position: absolute;
-		left: 0;
-		color: #b69100;
-		font-weight: 700;
-	}
-
-	/* Best Time to Visit */
-	.best-time-section {
-		padding: 6em 0;
-	}
-
-	.season-card {
-		background: #ffffff;
-		padding: 3em 2em;
-		border-radius: 4px;
-		height: 100%;
-		box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
-	}
-
-	.season-card h4 {
-		font-family: 'Playfair Display', serif;
-		font-size: 22px;
-		font-weight: 700;
-		color: #000;
-		margin-bottom: 0.5em;
-	}
-
-	.season-months {
-		font-family: 'Poppins', sans-serif;
-		font-size: 13px;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		color: #b69100;
-		font-weight: 600;
-		margin-bottom: 1.5em !important;
-	}
-
-	.season-card p {
-		font-family: 'Poppins', sans-serif;
-		font-size: 15px;
-		line-height: 1.8;
-		color: #666;
-	}
-
-	/* CTA Section */
-	.cta-section {
-		background-color: #5c4a3a;
-		padding: 5em 0;
-	}
-
-	.cta-section h2 {
-		font-family: 'Playfair Display', serif;
-		font-size: 36px;
-		font-weight: 700;
-		color: #ffffff;
-	}
-
-	.cta-section p {
-		font-family: 'Poppins', sans-serif;
-		font-size: 16px;
-		color: rgba(255, 255, 255, 0.8);
-	}
-
-	.cta-section .btn-primary {
-		background-color: #b69100;
-		border-color: #b69100;
-		font-size: 13px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
-
-	.cta-section .btn-primary:hover {
-		background-color: #9a7b00;
-		border-color: #9a7b00;
-	}
-
-	.cta-section .btn-outline-light {
-		border: 1px solid rgba(255, 255, 255, 0.6);
-		color: #ffffff;
-		font-size: 13px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-	}
-
-	.cta-section .btn-outline-light:hover {
-		background-color: rgba(255, 255, 255, 0.1);
-		border-color: #ffffff;
-	}
-
-	@media (max-width: 767.98px) {
-		.why-stay-block .col-md-6:has(.why-stay-img) {
-			padding: 2em 1.5em;
-		}
-
-		.why-stay-img {
-			min-height: 300px;
-		}
-
-		.why-stay-text {
-			padding: 3em 2em;
-		}
-
-		.why-stay-text h3 {
-			font-size: 24px;
-		}
-
-		.cta-section h2 {
-			font-size: 28px;
-		}
-
-		.cta-section {
-			padding: 4em 0;
-		}
-	}
-</style>

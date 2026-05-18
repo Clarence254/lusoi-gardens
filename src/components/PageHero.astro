@@ -1,13 +1,11 @@
 ---
 interface Props {
   title: string;
-  breadcrumb?: string;
   backgroundImage?: string;
 }
 
 const {
   title,
-  breadcrumb,
   backgroundImage = '/images/landscape-2.jpg',
 } = Astro.props;
 ---
@@ -18,10 +16,6 @@ const {
 >
   <div class="container">
     <div class="text">
-      <p class="breadcrumbs mb-2">
-        <span class="mr-2"><a href="/">Home</a></span>
-        {breadcrumb && <span>{breadcrumb}</span>}
-      </p>
       <h1>{title}</h1>
     </div>
   </div>

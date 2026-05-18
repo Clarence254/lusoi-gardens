@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout 
@@ -9,34 +11,25 @@ import PageHero from '../components/PageHero.astro';
   description="Discover stunning attractions near Lusoi Gardens including Mount Kenya National Park, Equator Marker, Ol Pejeta Conservancy, and more. We organize guided tours and transport for easy exploration."
   keywords="nearby attractions Lusoi Gardens, Mount Kenya National Park, Equator Marker Nanyuki, Ol Pejeta Conservancy, Samburu National Reserve, Meru National Park, Kenya attractions, guided tours Mount Kenya"
   ogImage="/images/mtkenya-park.jpg"
+
+  enableGsap={true}
+  gsapPage="marketing"
 >
-  <PageHero title="Nearby Attractions" breadcrumb="Nearby Attractions" backgroundImage="/images/landing-3.jpg" />
+  <PageHero title="Nearby Attractions" backgroundImage="/images/landing-3.jpg" />
 
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-        	<div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Nearby Attractions</span></p>
-            <h1 class="mb-4 bread">Nearby Attractions</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <PageIntro
+    eyebrow="Explore Kenya"
+    title="Discover the Beauty Around Us"
+    lead="We're surrounded by some of Kenya's most stunning natural and cultural attractions. Our team can organize guided tours and comfortable transport to these serene destinations — so you can explore with ease."
+    narrow
+  />
 
-  <section class="ftco-section ftco-menu" style="background-image: url(/images/restaurant-pattern.jpg);">
+  <section class="ftco-section lusoi-nearby-section">
 	<div class="container">
-		<div class="row justify-content-center mb-5 pb-3">
-	<div class="col-md-7 heading-section text-center ftco-animate">
-		<span class="subheading">Explore Kenya</span>
-	  <h2>Discover the Beauty Around Us</h2>
-	  <p class="mt-4">We're surrounded by some of Kenya's most stunning natural and cultural attractions. Our team can organize guided tours and comfortable transport to these serene destinations — so you can explore with ease.</p>
-	</div>
-  </div>
 		<div class="row">
 	  <div class="col-md-6">
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img order-md-last" style="background-image: url(/images/equator.jpg);"></div>
+			  <div class="img order-md-last" style={{ backgroundImage: "url('/images/equator.jpg')" }}></div>
 			  <div class="desc pr-3 text-md-right">
 				  <div class="d-md-flex text align-items-center">
 					  <h3 class="order-md-last heading-left"><span>Equator Marker</span></h3>
@@ -48,7 +41,7 @@ import PageHero from '../components/PageHero.astro';
 			  </div>
 		  </div>
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img order-md-last" style="background-image: url(/images/mtkenya-park.jpg);"></div>
+			  <div class="img order-md-last" style={{ backgroundImage: "url('/images/mtkenya-park.jpg')" }}></div>
 			  <div class="desc pr-3 text-md-right">
 				  <div class="d-md-flex text align-items-center">
 					  <h3 class="order-md-last heading-left"><span>Mount Kenya National Park</span></h3>
@@ -60,7 +53,7 @@ import PageHero from '../components/PageHero.astro';
 			  </div>
 		  </div>
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img order-md-last" style="background-image: url(/images/mtkenya-orphanage.jpeg);"></div>
+			  <div class="img order-md-last" style={{ backgroundImage: "url('/images/mtkenya-orphanage.jpeg')" }}></div>
 			  <div class="desc pr-3 text-md-right">
 				  <div class="d-md-flex text align-items-center">
 					  <h3 class="order-md-last heading-left"><span>Mount Kenya Animal Orphanage</span></h3>
@@ -72,7 +65,7 @@ import PageHero from '../components/PageHero.astro';
 			  </div>
 		  </div>
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img order-md-last" style="background-image: url(https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&h=600&fit=crop);"></div>
+			  <div class="img order-md-last" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&h=600&fit=crop')" }}></div>
 			  <div class="desc pr-3 text-md-right">
 				  <div class="d-md-flex text align-items-center">
 					  <h3 class="order-md-last heading-left"><span>Ol Pejeta Conservancy</span></h3>
@@ -87,7 +80,7 @@ import PageHero from '../components/PageHero.astro';
 
 	  <div class="col-md-6">
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img" style="background-image: url(https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop);"></div>
+			  <div class="img" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop')" }}></div>
 			  <div class="desc pl-3">
 				  <div class="d-md-flex text align-items-center">
 					  <h3><span>Ngare Ndare Forest Park</span></h3>
@@ -99,7 +92,7 @@ import PageHero from '../components/PageHero.astro';
 			  </div>
 		  </div>
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img" style="background-image: url(/images/BPHOUSE.jpg);"></div>
+			  <div class="img" style={{ backgroundImage: "url('/images/BPHOUSE.jpg')" }}></div>
 			  <div class="desc pl-3">
 				  <div class="d-md-flex text align-items-center">
 					  <h3><span>Baden-Powell's House, Nyeri</span></h3>
@@ -111,7 +104,7 @@ import PageHero from '../components/PageHero.astro';
 			  </div>
 		  </div>
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img" style="background-image: url(/images/samburu-reserve.jpeg);"></div>
+			  <div class="img" style={{ backgroundImage: "url('/images/samburu-reserve.jpeg')" }}></div>
 			  <div class="desc pl-3">
 				  <div class="d-md-flex text align-items-center">
 					  <h3><span>Samburu National Reserve</span></h3>
@@ -123,7 +116,7 @@ import PageHero from '../components/PageHero.astro';
 			  </div>
 		  </div>
 		  <div class="pricing-entry d-flex ftco-animate">
-			  <div class="img" style="background-image: url(/images/meru-national-park.jpg);"></div>
+			  <div class="img" style={{ backgroundImage: "url('/images/meru-national-park.jpg')" }}></div>
 			  <div class="desc pl-3">
 				  <div class="d-md-flex text align-items-center">
 					  <h3><span>Meru National Park</span></h3>
@@ -138,5 +131,10 @@ import PageHero from '../components/PageHero.astro';
   </div>
 	</div>
 </section>
+  <PageCta
+    title="Plan Your Adventure"
+    description="Ask our team to arrange guided tours and transport to nearby attractions."
+    buttonText="Contact Us"
+  />
 </BaseLayout>
 

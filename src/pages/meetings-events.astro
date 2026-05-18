@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout
@@ -12,37 +14,19 @@ import PageHero from '../components/PageHero.astro';
   enableGsap={true}
   gsapPage="marketing"
 >
-  <PageHero title="Meetings & Events" breadcrumb="Meetings & Events" backgroundImage="/images/landing-3.jpg" />
+  <PageHero title="Meetings & Events" backgroundImage="/images/landing-3.jpg" />
 
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-          <div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Meetings & Events</span></p>
-            <h1 class="mb-4 bread">Meetings & Events</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Intro -->
-  <section class="ftco-section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center ftco-animate">
-          <span class="subheading">Gather & Connect</span>
-          <h2 class="me-heading mb-4">The Perfect Setting for Every Occasion</h2>
-          <p class="me-intro">Whether you are planning a corporate retreat, an intimate workshop, or a special celebration, Lusoi Gardens offers versatile spaces set against the stunning backdrop of Mount Kenya and the Aberdare Ranges. Let the tranquility of nature inspire your next gathering.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageIntro
+    eyebrow="Gather & Connect"
+    title="The Perfect Setting for Every Occasion"
+    lead="Whether you are planning a corporate retreat, an intimate workshop, or a special celebration, Lusoi Gardens offers versatile spaces set against the stunning backdrop of Mount Kenya and the Aberdare Ranges. Let the tranquility of nature inspire your next gathering."
+    narrow
+  />
 
   <!-- Full-width image -->
   {/* <section class="ftco-no-pt ftco-no-pb">
     <div class="container-fluid px-0">
-      <div class="me-hero-img" style="background-image: url(/images/conference-room.jpg);"></div>
+      <div class="me-hero-img" style={{ backgroundImage: "url('/images/conference-room.jpg')" }}></div>
     </div>
   </section> */}
 
@@ -58,7 +42,7 @@ import PageHero from '../components/PageHero.astro';
           </div>
         </div>
         <div class="col-md-6 ftco-animate">
-          <div class="me-detail-img" style="background-image: url(/images/meeting-room.jpg);"></div>
+          <div class="me-detail-img" style={{ backgroundImage: "url('/images/meeting-room.jpg')" }}></div>
         </div>
       </div>
     </div>
@@ -69,7 +53,7 @@ import PageHero from '../components/PageHero.astro';
     <div class="container-fluid px-0">
       <div class="row no-gutters align-items-stretch">
         <div class="col-md-6 ftco-animate">
-          <div class="me-detail-img" style="background-image: url(/images/outdoor-space.jpg);"></div>
+          <div class="me-detail-img" style={{ backgroundImage: "url('/images/outdoor-space.jpg')" }}></div>
         </div>
         <div class="col-md-6 d-flex align-items-center ftco-animate">
           <div class="me-detail-text">
@@ -120,134 +104,10 @@ import PageHero from '../components/PageHero.astro';
     </div>
   </section> */}
 
-  <!-- CTA -->
-  <section class="ftco-section bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-8 text-center ftco-animate">
-          <h2 class="me-heading mb-4">Ready to Plan Your Event?</h2>
-          <p class="me-intro mb-4">Get in touch with our team to discuss your requirements and receive a tailored package for your meeting or event.</p>
-          <a href="/contact" class="btn btn-primary py-3 px-5">Plan Your Meeting / Event</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <PageCta
+    title="Ready to Plan Your Event?"
+    description="Get in touch with our team to discuss your requirements and receive a tailored package for your meeting or event."
+    buttonText="Plan Your Meeting / Event"
+  />
 </BaseLayout>
 
-<style>
-  .me-heading {
-    font-family: 'Playfair Display', serif;
-    color: #000;
-  }
-
-  .me-intro {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.9;
-  }
-
-  /* Hero image */
-  .me-hero-img {
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
-
-  /* Alternating detail blocks */
-  .me-detail-img {
-    background-size: cover;
-    background-position: center;
-    min-height: 480px;
-    height: 100%;
-  }
-
-  .me-detail-text {
-    padding: 4em 5em;
-    max-width: 600px;
-  }
-
-  .me-detail-text h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    color: #000;
-    margin-bottom: 1em;
-    position: relative;
-    padding-bottom: 1em;
-  }
-
-  .me-detail-text h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: #b69100;
-  }
-
-  .me-detail-text p {
-    color: #666;
-    font-size: 15px;
-    line-height: 1.9;
-    margin-bottom: 1.2em;
-  }
-
-  /* Conference Packages */
-  .me-packages-section {
-    background-color: #fff;
-  }
-
-  .me-package-card {
-    padding: 3em 2em;
-    border: 1px solid #eee;
-    margin-bottom: 2em;
-  }
-
-  .me-package-icon {
-    margin-bottom: 1.5em;
-  }
-
-  .me-package-icon span {
-    font-size: 48px;
-    color: #b69100;
-  }
-
-  .me-package-card h4 {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    color: #000;
-    margin-bottom: 0.8em;
-  }
-
-  .me-package-card p {
-    font-size: 15px;
-    color: #666;
-    line-height: 1.8;
-  }
-
-  .me-parking-note {
-    font-size: 15px;
-    color: #666;
-    font-style: italic;
-    line-height: 1.8;
-  }
-
-  @media (max-width: 767.98px) {
-    .me-hero-img {
-      height: 300px;
-    }
-
-    .me-detail-img {
-      min-height: 300px;
-    }
-
-    .me-detail-text {
-      padding: 3em 2em;
-    }
-
-    .me-detail-text h3 {
-      font-size: 24px;
-    }
-  }
-</style>

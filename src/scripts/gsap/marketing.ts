@@ -7,8 +7,8 @@ export function initMarketingAnimations(): void {
   if (pageHero) {
     const heroText = pageHero.querySelector(SEL.marketing.heroText);
     const targets = heroText
-      ? heroText.querySelectorAll('.breadcrumbs, h1')
-      : pageHero.querySelectorAll('.breadcrumbs, h1');
+      ? heroText.querySelectorAll('h1')
+      : pageHero.querySelectorAll('h1');
 
     if (targets.length) {
       fadeUp(targets, { stagger: 0.1, duration: MOTION.duration });
