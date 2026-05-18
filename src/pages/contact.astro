@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <BaseLayout 
@@ -9,8 +10,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   keywords="Lusoi Gardens inquiry, booking inquiry, resort questions, accommodation inquiry Kenya"
   ogImage="/images/landscape-2.jpg"
 >
-	<div class="hero-wrap" style="background-image: url('/images/landing-3.jpg');">
-    <div class="overlay"></div>
+  <PageHero title="Send Us an Inquiry" breadcrumb="Inquiry" backgroundImage="/images/landing-3.jpg" />
+
     <div class="container">
       <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
         <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
@@ -80,7 +81,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Please provide details about your inquiry..." required></textarea>
             </div>
             <div class="form-group">
-              <input type="submit" value="Send Inquiry" class="btn btn-primary py-3 px-5" id="submit-btn">
+              <input type="submit" value="Send Inquiry" class="btn btn-lusoi py-3 px-5" id="submit-btn">
             </div>
           </form>
         </div>

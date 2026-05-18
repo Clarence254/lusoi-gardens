@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <BaseLayout
@@ -8,9 +9,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Host your next meeting, conference, or special event at Lusoi Gardens. Versatile meeting room for up to 25 guests, scenic outdoor event spaces, and tailored conference packages near Mount Kenya."
   keywords="Lusoi Gardens meetings, conference venue Nyeri, event space Mount Kenya, corporate retreat Kenya, workshop venue, team building Kenya, wedding venue Nyeri"
   ogImage="/images/conference-room.jpg"
+  enableGsap={true}
+  gsapPage="marketing"
 >
-  <div class="hero-wrap" style="background-image: url('/images/landing-3.jpg');">
-    <div class="overlay"></div>
+  <PageHero title="Meetings & Events" breadcrumb="Meetings & Events" backgroundImage="/images/landing-3.jpg" />
+
     <div class="container">
       <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
         <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">

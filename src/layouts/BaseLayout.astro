@@ -1,6 +1,7 @@
 ---
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import GsapAnimations from '../components/GsapAnimations.astro';
 
 interface Props {
   title?: string;
@@ -11,6 +12,8 @@ interface Props {
   keywords?: string;
   noindex?: boolean;
   structuredData?: object;
+  enableGsap?: boolean;
+  gsapPage?: 'home' | 'marketing';
 }
 
 const { 
@@ -21,10 +24,12 @@ const {
   canonicalUrl,
   keywords = 'Lusoi Gardens, resort Kenya, Mount Kenya accommodation, nature retreat, family getaway, adventure activities, Nanyuki resort, Kenya tourism',
   noindex = false,
-  structuredData
+  structuredData,
+  enableGsap = false,
+  gsapPage,
 } = Astro.props;
 
-const siteUrl = Astro.site?.href || 'https://lusoigardens.com';
+const siteUrl = (Astro.site?.href || 'https://lusoigardens.com').replace(/\/$/, '');
 const currentUrl = canonicalUrl || new URL(Astro.url.pathname, siteUrl).href;
 const fullImageUrl = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
@@ -171,14 +176,20 @@ const finalStructuredData = structuredData || defaultStructuredData;
   <link rel="stylesheet" href="/css/flaticon.css">
   <link rel="stylesheet" href="/css/icomoon.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/lusoi-theme.css">
 </head>
-<body>
+<body
+  data-gsap-active={enableGsap ? '' : undefined}
+  data-gsap-page={enableGsap && gsapPage ? gsapPage : undefined}
+>
 
   <Navbar activePage={activePage} />
 
   <slot />
 
   <Footer />
+
+  {enableGsap && <GsapAnimations />}
 
   <script is:inline src="/js/jquery.min.js"></script>
   <script is:inline src="/js/jquery-migrate-3.0.1.min.js"></script>

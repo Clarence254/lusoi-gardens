@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <BaseLayout 
@@ -9,8 +10,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   keywords="Lusoi Gardens blog post, Mount Kenya travel story, Kenya resort article, nature retreat blog, travel insights Kenya"
   ogImage="/images/image_1.jpg"
 >
-	<div class="hero-wrap" style="background-image: url('/images/bg_1.jpg');">
-    <div class="overlay"></div>
+  <PageHero title="Blog Single" breadcrumb="Blog" backgroundImage="/images/bg_1.jpg" />
+
     <div class="container">
       <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
         <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">

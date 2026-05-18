@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <BaseLayout
@@ -8,9 +9,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Enjoy farm-to-table dining at Lusoi Gardens's hilltop restaurant with views of Mount Kenya and the Aberdare Ranges. Buffet and a la carte options for breakfast, lunch, and dinner."
   keywords="Lusoi Gardens restaurant, dining Mount Kenya, farm to table Kenya, restaurant Nyeri, resort dining, breakfast lunch dinner Kenya"
   ogImage="/images/restaurant-1.jpg"
+  enableGsap={true}
+  gsapPage="marketing"
 >
-  <div class="hero-wrap" style="background-image: url('/images/exterior-1.jpg');">
-    <div class="overlay"></div>
+  <PageHero title="Dining" breadcrumb="Dining" backgroundImage="/images/exterior-1.jpg" />
+
     <div class="container">
       <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
         <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">

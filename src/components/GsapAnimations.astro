@@ -1,0 +1,14 @@
+---
+/** Client-only GSAP entry — include via BaseLayout when enableGsap is true */
+---
+
+<script>
+  import { initGsap } from '../scripts/gsap/init';
+
+  const page = document.body.dataset.gsapPage;
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => initGsap(page));
+  } else {
+    initGsap(page);
+  }
+</script>

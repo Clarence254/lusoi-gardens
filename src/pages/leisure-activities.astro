@@ -1,16 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
 ---
 
 <BaseLayout 
   title="Leisure Activities & Outdoor Fun at Lusoi Gardens | Mount Kenya"
-  activePage="leisure-activities"
+  activePage="experiences"
   description="Discover exciting leisure activities at Lusoi Gardens. Enjoy nature walks, kids park, mountain biking, evening bonfires, and more outdoor adventures for all ages near Mount Kenya."
   keywords="leisure activities Lusoi Gardens, outdoor activities Kenya, nature walks Mount Kenya, kids park Nanyuki, mountain biking Kenya, family activities, adventure activities Kenya, outdoor fun"
   ogImage="/images/kids-park.jpeg"
 >
-	<div class="hero-wrap" style="background-image: url('/images/landing-3.jpg');">
-    <div class="overlay"></div>
+  <PageHero title="Leisure Activities" breadcrumb="Leisure Activities" backgroundImage="/images/landing-3.jpg" />
+
     <div class="container">
       <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
         <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
