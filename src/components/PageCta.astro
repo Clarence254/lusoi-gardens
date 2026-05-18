@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  buttonText: string;
+  buttonHref?: string;
+  buttonTarget?: '_blank' | '_self';
+}
+
+const {
+  title,
+  description,
+  buttonText,
+  buttonHref = '/contact',
+  buttonTarget,
+} = Astro.props;
+
+const rel = buttonTarget === '_blank' ? 'noopener noreferrer' : undefined;
+---
+
+<section class="lusoi-page-cta-wrap">
+  <div class="container">
+    <div class="lusoi-page-cta">
+      <h3>{title}</h3>
+      {description && <p>{description}</p>}
+      <a
+        href={buttonHref}
+        class="btn btn-lusoi"
+        target={buttonTarget}
+        rel={rel}
+      >
+        {buttonText}
+      </a>
+    </div>
+  </div>
+</section>

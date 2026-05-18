@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout 
@@ -8,22 +11,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Read our latest blog post about Lusoi Gardens, Mount Kenya experiences, and travel insights. Discover tips, stories, and updates from Kenya's premier nature retreat."
   keywords="Lusoi Gardens blog post, Mount Kenya travel story, Kenya resort article, nature retreat blog, travel insights Kenya"
   ogImage="/images/image_1.jpg"
->
-	<div class="hero-wrap" style="background-image: url('/images/bg_1.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-        	<div class="text">
-            <p class="breadcrumbs mb-2" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="/">Home</a></span> <span class="mr-2"><a href="/blog">Blog</a></span> <span>Blog Single</span></p>
-            <h1 class="mb-4 bread">Blog Single</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-	<section class="ftco-section ftco-degree-bg">
+  enableGsap={true}
+  gsapPage="marketing"
+>
+  <PageHero title="Blog Single" backgroundImage="/images/bg_1.jpg" />
+
+	<section class="ftco-section ftco-degree-bg lusoi-blog-post">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 ftco-animate order-md-last">
@@ -167,7 +161,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
-                  <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                  <input type="submit" value="Post Comment" class="btn btn-lusoi py-3 px-4">
                 </div>
 
               </form>
@@ -199,7 +193,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="sidebar-box ftco-animate">
             <h3>Recent Blog</h3>
             <div class="block-21 mb-4 d-flex">
-              <a class="blog-img mr-4" style="background-image: url(/images/image_1.jpg);"></a>
+              <a class="blog-img mr-4" style={{ backgroundImage: "url('/images/image_1.jpg')" }}></a>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta">
@@ -210,7 +204,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </div>
             </div>
             <div class="block-21 mb-4 d-flex">
-              <a class="blog-img mr-4" style="background-image: url(/images/image_2.jpg);"></a>
+              <a class="blog-img mr-4" style={{ backgroundImage: "url('/images/image_2.jpg')" }}></a>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta">
@@ -221,7 +215,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </div>
             </div>
             <div class="block-21 mb-4 d-flex">
-              <a class="blog-img mr-4" style="background-image: url(/images/image_3.jpg);"></a>
+              <a class="blog-img mr-4" style={{ backgroundImage: "url('/images/image_3.jpg')" }}></a>
               <div class="text">
                 <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
                 <div class="meta">

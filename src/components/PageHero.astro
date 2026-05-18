@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  backgroundImage?: string;
+}
+
+const {
+  title,
+  backgroundImage = '/images/landscape-2.jpg',
+} = Astro.props;
+---
+
+<section
+  class="lusoi-page-hero"
+  style={`background-image: url(${backgroundImage});`}
+>
+  <div class="container">
+    <div class="text">
+      <h1>{title}</h1>
+    </div>
+  </div>
+</section>

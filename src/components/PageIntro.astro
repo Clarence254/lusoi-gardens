@@ -1,0 +1,24 @@
+---
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  narrow?: boolean;
+}
+
+const { eyebrow, title, lead, narrow = false } = Astro.props;
+const colClass = narrow ? 'col-md-8' : 'col-md-10';
+---
+
+<section class="ftco-section lusoi-page-intro">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class={`${colClass} text-center`}>
+        {eyebrow && <span class="subheading">{eyebrow}</span>}
+        <h2>{title}</h2>
+        {lead && <p class="lusoi-lead">{lead}</p>}
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

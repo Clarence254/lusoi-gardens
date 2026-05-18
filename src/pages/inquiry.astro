@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout 
@@ -8,27 +11,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="Contact Lusoi Gardens for bookings, inquiries, or more information about our nature retreat near Mount Kenya. Located in Nyeri, Kenya. We're here to help plan your perfect getaway."
   keywords="contact Lusoi Gardens, Lusoi Gardens booking, Mount Kenya resort contact, Nyeri Kenya resort, resort inquiries, accommodation booking Kenya"
   ogImage="/images/landscape-2.jpg"
->
-	<div class="hero-wrap" style="background-image: url('/images/landing-3.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-        	<div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Contact</span></p>
-            <h1 class="mb-4 bread">Contact us</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-	<section class="ftco-section contact-section bg-light">
+  enableGsap={true}
+  gsapPage="marketing"
+>
+  <PageHero title="Contact us" backgroundImage="/images/landing-3.jpg" />
+
+  <PageIntro
+    eyebrow="Get in Touch"
+    title="Contact Information"
+    lead="Reach us by phone, email, or send a message using the form below. We look forward to helping you plan your visit."
+    narrow
+  />
+
+	<section class="ftco-section contact-section lusoi-contact-section">
     <div class="container">
       <div class="row d-flex mb-5 contact-info">
-        <div class="col-md-12 mb-4">
-          <h2 class="h3">Contact Information</h2>
-        </div>
         <div class="w-100"></div>
         <div class="col-md-4 d-flex">
         	<div class="info bg-white p-4">
@@ -63,7 +61,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
             </div>
             <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" id="submit-btn">
+              <input type="submit" value="Send Message" class="btn btn-lusoi py-3 px-5" id="submit-btn">
             </div>
           </form>
         

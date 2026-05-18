@@ -1,0 +1,60 @@
+---
+const cards = [
+  {
+    image: '/images/room-ft6.jpg',
+    icon: 'ion-ios-bed',
+    title: 'Serene Accommodations',
+    description: 'Elegant spaces with comfort and calming views.',
+    link: '/cabins',
+    linkText: 'Explore stays',
+  },
+  {
+    image: '/images/garden-ft1.jpg',
+    icon: 'flaticon-car',
+    title: 'Curated Experiences',
+    description: 'Guided walks, nature moments and memorable adventures.',
+    link: '/leisure-activities',
+    linkText: 'Explore experiences',
+  },
+  {
+    image: '/images/bonfire.jpg',
+    icon: 'flaticon-spa',
+    title: 'Reconnect in Nature',
+    description: 'Unwind by the fire, breathe deeply, and be present.',
+    link: '/leisure-activities',
+    linkText: 'View activities',
+  },
+];
+---
+
+<section class="lusoi-section lusoi-section-cream lusoi-feature-cards">
+  <div class="container">
+    <div class="lusoi-intro ftco-animate">
+      <span class="lusoi-eyebrow">Designed for rest, inspired by nature</span>
+      <h2>Stay. Experience. Reconnect.</h2>
+    </div>
+    <div class="row">
+      {cards.map((card) => (
+        <div class="col-md-4 mb-4 mb-md-0">
+          <article class="lusoi-feature-card ftco-animate">
+            <div
+              class="card-img-wrap"
+              style={`background-image: url(${card.image});`}
+            >
+              <div class="card-icon">
+                <span class={card.icon}></span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>{card.title}</h3>
+              <p>{card.description}</p>
+              <a href={card.link} class="lusoi-link-arrow">
+                {card.linkText} &rarr;
+              </a>
+            </div>
+          </article>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

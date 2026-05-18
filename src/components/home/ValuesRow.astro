@@ -1,0 +1,44 @@
+---
+const values = [
+  {
+    icon: 'ion-ios-leaf',
+    title: 'Sustainable Stay',
+    description: 'Thoughtful hospitality that protects nature.',
+  },
+  {
+    icon: 'ion-ios-heart-outline',
+    title: 'Locally Rooted',
+    description: 'Supporting our community and local partners.',
+  },
+  {
+    icon: 'ion-ios-person-outline',
+    title: 'Warm Hospitality',
+    description: 'Genuine care. Personal service. Always.',
+  },
+  {
+    icon: 'ion-ios-shield-outline',
+    title: 'Safe & Secure',
+    description: 'Your safety and peace of mind always come first.',
+  },
+];
+---
+
+<section class="lusoi-core-values">
+  <div class="container">
+    <div class="lusoi-core-values-row ftco-animate">
+      {values.map((item, index) => (
+        <div class={`lusoi-core-value ${index < values.length - 1 ? 'has-divider' : ''}`}>
+          <div class="lusoi-core-value-inner">
+            <div class="icon-wrap" aria-hidden="true">
+              <span class={item.icon}></span>
+            </div>
+            <div class="lusoi-core-value-text">
+              <h4>{item.title}</h4>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

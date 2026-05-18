@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import PageIntro from '../components/PageIntro.astro';
+import PageCta from '../components/PageCta.astro';
 ---
 
 <BaseLayout 
@@ -8,29 +11,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   description="We value your feedback! Share your experience at Lusoi Gardens and help us improve. Your thoughts help us create better memories for future guests."
   keywords="Lusoi Gardens feedback, guest reviews, customer feedback, resort reviews Kenya"
   ogImage="/images/landscape-2.jpg"
->
-	<div class="hero-wrap" style="background-image: url('/images/landing-3.jpg');">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-        	<div class="text">
-            <p class="breadcrumbs mb-2"><span class="mr-2"><a href="/">Home</a></span> <span>Guest Feedback</span></p>
-            <h1 class="mb-4 bread">Guest Feedback</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-	<section class="ftco-section contact-section bg-light">
+  enableGsap={true}
+  gsapPage="marketing"
+>
+  <PageHero title="Guest Feedback" backgroundImage="/images/landing-3.jpg" />
+
+  <PageIntro
+    title="We'd Love to Hear From You"
+    lead="Your feedback helps us improve and create better experiences for all our guests. Please take a moment to share your thoughts about your stay at Lusoi Gardens."
+    narrow
+  />
+
+	<section class="ftco-section contact-section lusoi-contact-section">
     <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center">
-          <h2 class="mb-4">We'd Love to Hear From You</h2>
-          <p>Your feedback helps us improve and create better experiences for all our guests. Please take a moment to share your thoughts about your stay at Lusoi Gardens.</p>
-        </div>
-      </div>
       <div class="row justify-content-center">
         <div class="col-md-8">
           <form id="feedback-form" class="bg-white p-5 contact-form">
@@ -112,7 +106,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               </label>
             </div>
             <div class="form-group">
-              <input type="submit" value="Submit Feedback" class="btn btn-primary py-3 px-5" id="submit-btn">
+              <input type="submit" value="Submit Feedback" class="btn btn-lusoi py-3 px-5" id="submit-btn">
             </div>
           </form>
         </div>
@@ -121,7 +115,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="col-md-8 text-center">
           <p class="mb-3">Thank you for taking the time to share your experience with us!</p>
           <a href="/contact" class="btn btn-secondary py-2 px-4 mr-2">Make an Inquiry</a>
-          <a href="/" class="btn btn-primary py-2 px-4">Return Home</a>
+          <a href="/" class="btn btn-lusoi py-2 px-4">Return Home</a>
         </div>
       </div>
 
