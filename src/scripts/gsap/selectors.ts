@@ -33,7 +33,7 @@ export const SEL = {
   marketing: {
     pageHero: '.lusoi-page-hero',
     heroText: '.lusoi-page-hero .text',
-    sections: 'section.ftco-section',
+    sections: 'section.ftco-section:not(.lusoi-tiles-section)',
   },
 } as const;
 

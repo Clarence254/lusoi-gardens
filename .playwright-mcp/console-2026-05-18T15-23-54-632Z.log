@@ -1,0 +1,20 @@
+[     947ms] [WARNING] [Meta Pixel] - Unable to parse JSON-LD tag. Malformed JSON found: '{"@context":"https://schema.org","@type":"Resort","name":"Lusoi Gardens","description":"Discover exciting leisure activities at Lusoi Gardens. Enjoy nature walks, kids park, mountain biking, evening bonfires, and more outdoor adventures for all ages near Mount K'. @ https://connect.facebook.net/en_US/fbevents.js:181
+[    1558ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2 @ http://localhost:4322/leisure-activities:0
+[    1558ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2 @ http://localhost:4322/leisure-activities:0
+[    1558ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/playfairdisplay/v40/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2 @ http://localhost:4322/leisure-activities:0
+[    1558ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2 @ http://localhost:4322/leisure-activities:0
+[    1558ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: http://localhost:4322/fonts/icomoon/icomoonccfb.ttf?6tt51o @ http://localhost:4322/leisure-activities:0
+[    1902ms] [LOG] JQMIGRATE: Migrate is installed, version 3.0.1 @ http://localhost:4322/js/jquery-migrate-3.0.1.min.js:32
+[    1969ms] [WARNING] Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading @ https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false:331
+[    1970ms] [ERROR] Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep) @ http://localhost:4322/node_modules/.vite/deps/gsap.js?v=6d27690f:0
+[    1970ms] [ERROR] Failed to load resource: the server responded with a status of 504 (Outdated Optimize Dep) @ http://localhost:4322/node_modules/.vite/deps/gsap_ScrollTrigger.js?v=cd352498:0
+[    1975ms] [WARNING] google.maps.event.addDomListener() is deprecated, use the standard
+addEventListener() method instead:
+https://developer.mozilla.org/docs/Web/API/EventTarget/addEventListener
+The feature will continue to work and there is no plan to decommission
+it. @ https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false:212
+[    2001ms] Uncaught InvalidValueError: Map: Expected mapDiv of type HTMLElement but was passed null.
+    at _.Vm (https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false:202:396)
+    at _.fr (https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false:277:273)
+    at init (http://localhost:4322/js/google-map.js:43:14)
+[    6988ms] [WARNING] Google Maps JavaScript API warning: SensorNotRequired https://developers.google.com/maps/documentation/javascript/error-messages#sensor-not-required @ https://maps.googleapis.com/maps-api-v3/api/js/64/14a/util.js:29

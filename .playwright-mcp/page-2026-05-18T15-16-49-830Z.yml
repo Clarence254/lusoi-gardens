@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Lusoi Gardens" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Lusoi Gardens" [ref=e5]
+      - text: 
+      - generic [ref=e6]:
+        - list [ref=e7]:
+          - listitem [ref=e8]:
+            - link "Home" [ref=e9] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e10]:
+            - link "Stay" [ref=e11] [cursor=pointer]:
+              - /url: /cabins
+          - listitem [ref=e12]:
+            - link "Experiences" [ref=e13] [cursor=pointer]:
+              - /url: /leisure-activities
+          - listitem [ref=e14]:
+            - link "Dining" [ref=e15] [cursor=pointer]:
+              - /url: /dining
+          - listitem [ref=e16]:
+            - link "Meetings" [ref=e17] [cursor=pointer]:
+              - /url: /meetings-events
+          - listitem [ref=e18]:
+            - link "About" [ref=e19] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e20]:
+            - link "Contact" [ref=e21] [cursor=pointer]:
+              - /url: /contact
+        - list [ref=e22]:
+          - listitem [ref=e23]:
+            - link "Book your retreat" [ref=e24] [cursor=pointer]:
+              - /url: /contact
+  - heading "Leisure Activities" [level=1] [ref=e28]
+  - generic [ref=e32]:
+    - heading "Experiences in Nature" [level=2] [ref=e33]
+    - paragraph [ref=e34]: At Lusoi Gardens, we offer a diverse range of leisure activities designed to connect you with nature, create lasting memories, and provide moments of adventure and relaxation. Whether you're seeking outdoor exploration, family fun, or peaceful moments by the fire, our carefully curated experiences blend seamlessly with the natural beauty of Mount Kenya's foothills.
+  - generic [ref=e36]:
+    - generic [ref=e39]:
+      - heading "Nature Walks & Hiking" [level=2] [ref=e40]
+      - paragraph [ref=e41]: EXPLORE THE TRAILS
+      - paragraph [ref=e42]: Guided nature walks along River Nairobi and through Ngare Ndare Forest. Discover waterfalls, canopy walkways, and diverse wildlife. Perfect for bird watching and photography with designated photo stops along the trails.
+    - generic [ref=e47]:
+      - heading "Restaurant" [level=2] [ref=e48]
+      - paragraph [ref=e49]: FRESH LOCAL CUISINE
+      - paragraph [ref=e50]: Savor a delicious meal made with ingredients harvested directly from our on-site farm and local producers. Our restaurant offers a seasonal menu that highlights the region’s finest flavors, served in a warm and inviting atmosphere.
+    - generic [ref=e53]:
+      - heading "Lush Gardens" [level=2] [ref=e54]
+      - paragraph [ref=e55]: PEACEFUL RETREAT
+      - paragraph [ref=e56]: Stroll through beautifully curated gardens featuring native plants, flowering pathways, and quiet seating areas. A perfect setting for relaxation, photography, or simply enjoying the peaceful surroundings.
+    - generic [ref=e61]:
+      - heading "Relaxation & Fireside" [level=2] [ref=e62]
+      - paragraph [ref=e63]: UNWIND & RECONNECT
+      - paragraph [ref=e64]: Garden lounges, outdoor café, and cozy corners with hammocks and reading nooks. Fireside evenings with blankets, herbal tea, and storytelling under the stars. Perfect for group events and team-building. Available on request.
+  - generic [ref=e67]:
+    - heading "Explore Our Experiences" [level=3] [ref=e68]
+    - paragraph [ref=e69]: Plan your visit and discover everything Lusoi Gardens has to offer.
+    - link "Plan Your Visit" [ref=e70] [cursor=pointer]:
+      - /url: /about
+  - contentinfo [ref=e71]:
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - text: Nyeri, Kenya |
+        - link "View on Map" [ref=e75] [cursor=pointer]:
+          - /url: https://maps.google.com/?q=Nyeri,+Kenya
+      - list [ref=e76]:
+        - listitem [ref=e77]:
+          - link "Facebook" [ref=e78] [cursor=pointer]:
+            - /url: https://web.facebook.com/LusoiGardensResort
+            - generic [ref=e79]: 
+        - listitem [ref=e80]:
+          - link "Instagram" [ref=e81] [cursor=pointer]:
+            - /url: https://www.instagram.com/lusoigardensresort/
+            - generic [ref=e82]: 
+        - listitem [ref=e83]:
+          - link "Email" [ref=e84] [cursor=pointer]:
+            - /url: mailto:reservations@lusoigardens.com
+            - generic [ref=e85]: 
+      - generic [ref=e86]:
+        - link "+254 797 590 865" [ref=e87] [cursor=pointer]:
+          - /url: tel:+254797590865
+        - text: "|"
+        - link "reservations@lusoigardens.com" [ref=e88] [cursor=pointer]:
+          - /url: mailto:reservations@lusoigardens.com
+  - img [ref=e90]
+  - generic [ref=e95]:
+    - button "Menu" [ref=e96]:
+      - img [ref=e98]
+      - generic: Menu
+    - button "Inspect" [ref=e102]:
+      - img [ref=e104]
+      - generic: Inspect
+    - button "Audit" [ref=e106]:
+      - generic [ref=e107]:
+        - img [ref=e108]
+        - img [ref=e111]
+      - generic: Audit
+    - button "Settings" [ref=e114]:
+      - img [ref=e116]
+      - generic: Settings

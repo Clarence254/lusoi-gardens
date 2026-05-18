@@ -23,11 +23,10 @@ import PageCta from '../components/PageCta.astro';
   />
 
   <!-- Tile Style Section -->
-  <section class="ftco-section ftco-no-pt ftco-no-pb">
+  <section class="lusoi-tiles-section ftco-no-pt ftco-no-pb">
     <div class="container-fluid px-0">
-      <!-- Nature Walks & Hiking Tile -->
-      <div class="row no-gutters">
-        <!-- Left: Brand Color Text Panel -->
+      <!-- Nature Walks & Hiking -->
+      <div class="row no-gutters lusoi-tile-row">
         <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--dark">
           <div class="tile-content">
             <h2 class="mb-3">Nature Walks & Hiking</h2>
@@ -35,29 +34,23 @@ import PageCta from '../components/PageCta.astro';
             <p>Guided nature walks along River Nairobi and through Ngare Ndare Forest. Discover waterfalls, canopy walkways, and diverse wildlife. Perfect for bird watching and photography with designated photo stops along the trails.</p>
           </div>
         </div>
-        <!-- Right: Image Panel -->
-        <div class="col-md-6 lusoi-tile-img">
-        </div>
+        <div class="col-md-6 lusoi-tile-img lusoi-tile-img--nature-walk" aria-hidden="true"></div>
       </div>
-      
-      <!-- Restaurant Tile -->
-      <div class="row no-gutters tile-row-swap">
-        <!-- Left: Image Panel -->
-        <div class="col-md-6 lusoi-tile-img">
-        </div>
-        <!-- Right: Light Beige Text Panel -->
+
+      <!-- Restaurant -->
+      <div class="row no-gutters lusoi-tile-row lusoi-tile-row--image-left">
+        <div class="col-md-6 lusoi-tile-img lusoi-tile-img--restaurant" aria-hidden="true"></div>
         <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--light">
           <div class="tile-content">
             <h2 class="mb-3">Restaurant</h2>
             <p class="lusoi-tile-eyebrow mb-4">FRESH LOCAL CUISINE</p>
-            <p>Savor a delicious meal made with ingredients harvested directly from our on-site farm and local producers. Our restaurant offers a seasonal menu that highlights the region’s finest flavors, served in a warm and inviting atmosphere.</p>
+            <p>Savor a delicious meal made with ingredients harvested directly from our on-site farm and local producers. Our restaurant offers a seasonal menu that highlights the region's finest flavors, served in a warm and inviting atmosphere.</p>
           </div>
         </div>
       </div>
-      
-      <!-- Kids Activities Tile -->
-      <div class="row no-gutters">
-        <!-- Left: Brand Color Text Panel -->
+
+      <!-- Lush Gardens -->
+      <div class="row no-gutters lusoi-tile-row">
         <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--dark">
           <div class="tile-content">
             <h2 class="mb-3">Lush Gardens</h2>
@@ -65,17 +58,12 @@ import PageCta from '../components/PageCta.astro';
             <p>Stroll through beautifully curated gardens featuring native plants, flowering pathways, and quiet seating areas. A perfect setting for relaxation, photography, or simply enjoying the peaceful surroundings.</p>
           </div>
         </div>
-        <!-- Right: Image Panel -->
-        <div class="col-md-6 lusoi-tile-img">
-        </div>
+        <div class="col-md-6 lusoi-tile-img lusoi-tile-img--gardens" aria-hidden="true"></div>
       </div>
-      
-      <!-- Relaxation & Fireside Evenings Tile -->
-      <div class="row no-gutters tile-row-swap">
-        <!-- Left: Image Panel -->
-        <div class="col-md-6 lusoi-tile-img">
-        </div>
-        <!-- Right: Light Beige Text Panel -->
+
+      <!-- Relaxation & Fireside -->
+      <div class="row no-gutters lusoi-tile-row lusoi-tile-row--image-left">
+        <div class="col-md-6 lusoi-tile-img lusoi-tile-img--bonfire" aria-hidden="true"></div>
         <div class="col-md-6 lusoi-tile-panel lusoi-tile-panel--light">
           <div class="tile-content">
             <h2 class="mb-3">Relaxation & Fireside</h2>
@@ -86,6 +74,7 @@ import PageCta from '../components/PageCta.astro';
       </div>
     </div>
   </section>
+
   <PageCta
     title="Explore Our Experiences"
     description="Plan your visit and discover everything Lusoi Gardens has to offer."
